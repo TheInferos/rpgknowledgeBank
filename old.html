@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="QR_CSS.css">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+<script>
+
+
+
+function getResult(term) {
+	var result = ''
+	var intro = 'Here\'s What I have on '+term+'<br>';
+	
+	term = term.toLowerCase();
+
+	
+	if (term == 'acrobatics'){
+        var result = 'Acrobatics (Advanced, Movement)<br>Stat: Agility <br>Useful for the Acolyte on the move, Acrobatics can be used in numerous situations to negate obstacles and circumvent treacherous conditions. Acrobatics can also provide a definitive edge when facing less agile foes. <br>Hot Pursuit <br>Normally, chasing after an opponent or fleeing from a pursuer is an Opposed Agility Test. To the acrobatic Acolyte, however, the environment can be a valuable tool, an advantage that allows the Acolyte to leap over railings, run along aerial walkways, jump across rooftops and careen down staircases. Whenever you are engaged in a pursuit through a congested area—crowds, difficult terrain, and so on, you may make an Acrobatics Test (in place of your Agility Test) for the Opposed Test. <br>Negotiating Obstacles <br>To a skilled acrobat, every obstacle is an opportunity, and every obstruction a challenge instead of a barrier. Whenever you Charge or Run through treacherous terrain or through an area containing an obstacle, you may make an Acrobatics Test in place of an Agility Test to avoid falling Prone. You may also attempt an Acrobatics Test as a Free Action prior to moving at your normal rate through treacherous environments (but not environments made treacherous because of poor visibility). <br>Tumbling Evasion <br>When engaged with an opponent, you may Test Acrobatics to disengage as a Half Action instead of a Full Action. A successful Test allows you to move as if you had taken a Half Move Action without granting your opponent a free attack (see Fleeing in Dark Heresy on page 192). A failed Test means you still move, but your opponent gets a free attack with a +10 bonus.<br><br>Pursuits <br>At some time a character is bound to find himself involved in a chase, pursuing or being pursued by unfriendly heretics. This can be a thrilling component to roleplaying games, especially those involving dangerous environments, but such encounters can be a chore to run. To resolve pursuit simply, use the following rules. <br>A Pursuit Dissected <br>All pursuits occur in Detailed Time, so participants roll for Initiative and move as described in Dark Heresy. Where pursuit differs from normal combat encounters is in the tracking of Pursuit Points. After rolling for Initiative, the character that acts first gains 1 Pursuit Point. On their Turn, each character involved in the pursuit, may take normal Actions (such as shooting at the fleeing opponent or pursuer, using a power, and so on). Alternatively, the character can Chase or Flee by making an Agility Test. The GM assigns the Difficulty based on the environment, with open areas being Easy (+30), while a densely packed marketplace would be Very Hard (–30). A success equals 1 Pursuit Point plus 1 Pursuit Point for each degree of success. A failure reduces the number of Pursuit Points by 1 and by another 1 point for a failure by two or more degrees. A failure by four or more degrees, reduces the Pursuit Points by 1d5. A character with negative Pursuit Points is effectively out of the chase or, for the fleeing character, pulled out of the chase. The first character to accumulate 10 Pursuit Points gets away or catches their prey, depending on who’s doing the chasing or fleeing. <br>Example <br>Karl runs away from a pair of drugged-up gangers who want his stylish boots. Karl’s player rolls Initiative as normal (1d10+AB) and the GM rolls Initiative for the gang members (1d10+AB). Karl wins the Initiative, so he gains 1 Pursuit Point. On his Turn, he flees, so he Tests Agility. The GM rules that the streets are lightly congested, so the Test is Challenging (+0). Karl succeeds on the Test and gains a degree of success, netting him 2 more Pursuit Points for a total of 3. The gang members follow and Test Agility. The GM should Test them separately, which he does, with one succeeding and one failing, so one of the gang members falls behind. The other only succeeded, so he has just 1 Pursuit Point to Karl’s 3. The chase continues over a number of Rounds until either Karl or the gang member achieves 10 Pursuit Points or until one breaks off the chase. <br>Slowing Pursuit <br>If you’re being chased, you can slow your pursuers by creating obstacles. There must be something to use—a crate of bottles, boxes, barrels, people and so on. Creating an obstacle reduces the number of Pursuit Points you would earn for a successful Agility Test in the Round by 1, however, you increase the Difficulty of your pursuers’ Agility Tests by one-step. <br>Distance <br>While these pursuit rules are somewhat abstracted, actual distance is covered. For each Round of pursuit, the participants cover a number of metres equal to their Run movement.';
+	}
+	
+	else if (term == 'awareness'){
+        var result = 'Awareness(Basic Skill)<br>Stat: Perception)<br>The Awareness skill reflects your ability to perceive hidden dangers and to notice small details about your physical surroundings. You use the Awareness skill to notice ambushes, spot traps and discern other threats to you and your allies. Awareness is not tied to any one sense; it encompasses them all. When using Awareness to detect a hidden enemy, the Test is always Opposed. Otherwise, the thing you are trying to detect applies a Difficulty based on how cunningly concealed it is. An Awareness Test is usually a Free Action made in reaction to something.';
+	}
+	else if (term == 'barter'){
+        var result = 'Barter (Basic)<br>Stat: Fellowship<br>Whether conducting menial chores in the marketplace before setting off on a mission, bribing guards to let you slip in the backdoor unnoticed, or negotiating for a choice piece of information, the Barter skill is always handy for minimising the impact to an Inquisitor’s cred-stick.<br>Bribery <br>By first making a Barter Test, you can increase your chances of success with a subsequent Interaction Test by offering goods, services or cold, hard Thrones. A successful Barter Test and each degree of success beyond, grants you a +5 bonus on your next Interaction Test against your target made within a number of days equal to your Fellowship Bonus. The Difficulty of the Barter Test depends on the nature of the bribe as determined by the GM, who take in account the value of the bribe and the target’s honesty and motivations.';
+	}
+	
+	else if (term == 'blather'){
+        var result = 'Blather<br>(Advanced Skill, Interaction)<br>Stat: Fellowship<br>When you make a Blather Test, you stall for time by running off at the mouth, spewing a stream of words and nonsense in an attempt to confuse and distract others. A Blather Test is always Opposed by your target’s Willpower (or Scrutiny). If you succeed and the target fails, the target is distracted by you and can do nothing for one Round, staring dumbfounded and wondering if you are drunk, crazy or both. For every degree of success, you dumbfound the target for an additional Round. If your target succeeds and you fail, or if you both fail, your attempt at verbal acrobatics fails and the target may act normally. In the case where you both succeed, the character that had the most degrees of success determines the outcome. You can also use Blather against multiple opponents. For similar opponents—those that have the same general Characteristics—make a Blather Test as normal, but the GM rolls just one Willpower Test. If you win the Opposed Test, you affect a number of targets equal to your Fellowship Bonus. NPCs, while confused by your banter, are unaffected by your words if they are in obvious danger or if it is clear there are preparations being made to harm them. The target must understand the language you are speaking or the Test automatically fails—you cannot, for instance, use this Skill against animals. A Blather Test is a Full Action.';
+	}
+	else if (term == 'carouse'){
+        var result = 'Carouse (Basic)<br>Toughness<br>Whilst excessive drinking is hardly encouraged by the Inquisition, only the most puritanical of Inquisitors would begrudge their Acolytes a drink or two. In addition to its primary use for relaxing, many an important clue or tip-off has been gained whilst carousing in a none too salubrious establishment, and only Acolytes who can hold their amasec stand any chance of remembering it come the morning. Drinking Contests: A drinking contest, whether in the form of a competition to drink alcohol the fastest or to be the last man standing, is simply an Opposed Carouse Test. The consequences for failure are usually embarrassing rather than harmful, although this does depend on the drink consumed.';
+	}
+	else if (term == 'charm'){
+        var result = 'Charm (Basic, Interaction)<br>Fellowship<br>One of the more vital tools available to Acolytes in their pursuit of the witch and heretic, Charm allows you to instil feeling of kinship and companionability in those you meet. A successful Test can make friends out of foes, bank the fires of anger and get you into places where the bullet would otherwise fail. Compel: You can convince a target to do something they otherwise might not do by laying it on thick with flattery or encouragement. You can compel the target, effectively improving his Disposition by two-steps instead of the normal one-step, by accepting a –20 penalty to your Charm Test. The target does as you ask, but afterwards he is entitled to an Intelligence Test to realise he has been used. If he succeeds, his Disposition worsens by three steps. On a failed Charm Test to compel, the target’s Disposition drops by one-step. First Impressions First impressions last, as the old Imperial adage goes, and it will do you well to keep this in mind as you make your way through the universe. When you first encounter a character, you may make a Charm Test to leave them with a positive impression, making subsequent Interaction Skill Tests one step easier until you fail a Skill Test or commit some breach of etiquette or social blunder. Of course, if you fail this Test your attempt has the opposite effect, making Interaction Skill Tests one-step more difficult';
+	}
+	else if (term == 'chem-Use'){
+        var result = 'Chem-Use (Advanced, Investigation)<br>Stat:Intelligence<br>The life of an Acolyte is one fraught with peril, with hidden dangers everywhere as enemies of the Imperium do their best to survive under the oppressive weight of the Inquisition. Since many foes lack the firepower to mount significant opposition against the agents of the Inquisition, many resort to cowardly tactics in the forms of poisons, toxins and other vile substances to confuse, injure or kill their enemies. Chem-Use, then, can serve as the first line of defence against these vile weapons, while also giving the Acolyte the tools to concoct filthy brews of his own./nAlien Toxins: From the unholy cocktails imbued with the warp by Chaos cultists to the strange and lethal venom of the Tyranids, the galaxy brims with an appalling assortment of venoms and poisons, all of which are available if you know the right place to look. Normally, when you encounter a toxin, you may Test Chem-Use to identify it (see Detecting Poisons). If you fail this Test, you may still use the toxin, but the Difficulty worsens by two-steps.<br>Concealing Poisons<br> Whenever you want to introduce a toxin into a target’s food, drink or air and want to conceal your activity, you may make a Difficult (–10) Chem-Use Test to administer the chemical in a way the victim may not detect. On a success, you apply the poison normally. However, for each degree of success, you worsen the Difficulty of the Chem-Use Test made later to identify the toxin from the victim’s remains. More Than Human: Unnatural Characteristics, Test and Skills Explained Certain creatures and antagonists have the Unnatural Characteristic trait representing a superhuman level of ability in one or more areas. Each Unnatural trait has a multiplier illustrating just how great the ability is (×2, ×3, etc.) which applies in the following ways: The Characteristic Bonus is the first digit of their Characteristic score multiplied by the amount in brackets. For example: an Ogryn with Unnatural Strength (×2) and a Strength Characteristic of 43, would have a Strength Bonus of 8 (4×2=8). Note that Unnatural Agility whilst increasing the AB, does not affect the creature’s Move Rate—this is a separate Trait, Unnatural Speed (see Dark Heresy page 333). When taking a Skill Test based upon a Characteristic with the Unnatural trait, the base Difficulty of the Test is staged downwards one level for degree of multiplier past normal (to maximum of +30), For example: the Archmagos Voltaic has a Dark Age of Technology cortical implant giving him Unnatural Intelligence (×3). He is called on to repair a damaged plasma core using his Intelligence based Tech Use skill. Normally this would be a Very Hard (–30) Test, but thanks to his Unnatural Intelligence the Difficulty is reduced by two stages to Difficult (–10), (–1 stage for ×2, and –1 for ×3). During Opposed Characteristic Tests, where success is achieved, the Unnatural multiplier is added to the degrees of success. In the case of a tie, the participant without the Unnatural Characteristic trait loses the Opposed Test. For example: Garm Felbood is struggling with a tentacled monstrosity from the swamps of Dusk. Garm has Strength 40 and the thing from the swamp has Strength 33 (Unnatural (×2)). Garm rolls 20 (two degrees of success) and the thing rolls 30 (straight success), unfortunately the thing adds +2 degrees of success because of its (×2) modifier, bringing the Opposed Test to a draw. This translates to a victory to the swamp thing as it has Unnatural Strength and poor old Garm does not!<br>Detecting Poisons: You may use Chem-Use when analysing the remains of a victim to detect toxins and chemicals buried in the flesh. Provided you have a toxin wand or a chemistry lab, a successful Chem-Use Test reveals the absence or presence of such a substance. Each degree of success reveals one more component of the substance, including such things as what it is, its method of delivery, and the most likely places where it can be procured. If you lack proper equipment, you take a –20 penalty on your Chem-Use Test. Other factors can modify the Difficulty, including the quality of the remains, attempts to mask the substance chemically, or even the nature of the substance itself.';
+	}
+	else if (term == 'ciphers'){
+        var result = 'Ciphers (Advanced)<br>Stat: Intelligence<br>Skill Group: Acolyte, Occult, Secret Society, Underworld and War Cant. Ciphers is the ability to communicate in a specific code, a language developed by a group to conceal the contents of their conversations. Many Inquisitors develop their own Ciphers to communicate their instructions to their Acolytes, while also giving a vital tool for use between their servants while on missions. Whilst the Skill Groups for this Skill are quite broad, you can make them more specific, effectively creating sub-groups for each sub-skill. When using the Ciphers skill to discern or translate the meaning of the code of which you do not actually know, but is within a Skill Group for which you are trained, you may Test Ciphers normally, but at a –20 penalty.<br>Countermeasures<br>When a cipher is cracked by the enemy, it usually means bad news for those groups who rely on it, leading to misinformation and signs laid by the enemy that lead them into traps. If you suspect that your cipher has been cracked or that someone is using it to feed you bad information, you may make a Cipher Test opposed by your opponent’s Cipher Test. Success indicates that you have worked out that something is wrong, giving you the opportunity to turn the tables on your opponent. Failure indicates that you are none the wiser to the subterfuge. The GM always rolls both sides of the Opposed Test in secret to avoid tipping you off that something is up.<br>Deciphering a Cipher<br>Once you have identified a cipher, the meaning remains hidden unless it can first be deciphered. The easiest way to decipher a cipher is to capture someone who already knows its meaning and then persuade them to reveal its secrets. Otherwise, the task becomes a lot harder, requiring days of painstaking code cracking and number crunching, and even then you may only be able to decipher this particular message and not crack the entire cipher. Cracking a cipher is an Investigation Test with a Hard benchmark, meaning that Tests to overcome it are at a –20 penalty. The process takes one month. You may use raw Intelligence, or your Logic or Scholastic Lore (Cryptology) as the Investigation Skill. Successfully interrogating or bribing someone who knows the code may reduce the benchmark of the investigation or negate the need for a roll at all.';
+	}
+	else if (term == 'climb'){
+        var result = 'Climb (Basic, Movement)<br>Stat: Strength<br>Whether breaking into a cultist stronghold, clambering up scaffolding to find a good place for sniping at your enemies, or scrambling up a tree to escape from the snapping jaws of some alien beast, Climb is a useful Skill to have.<br>Abseiling<br>You may make a Climb Test in place of Strength when abseiling. See Chapter VII: Playing the Game in Dark Heresy for details. <br>Helping Others Climb<br>You may help novice climbers climb by setting up guide ropes for them, pointing out good hand holds or physically helping them up. You may assist another person with a Climb Test, even if they don’t have the Skill themselves.<br>Rappel <br>You can descend more quickly when rappelling ropes are in place. When using ropes to rappel, you may Test Climb to safely descend at a speed of three times your normal Move Rate. A failed Test means you make no progress. A failed Test by one or more degrees means that you have become tangled up in the rope and must succeed on a Climb Test on the following Round to free yourself. A failed Test by three or more degrees means that a dreadful mishap has occurred and you fall, taking Damage as normal. <br>Speed Climbing <br>You may climb more quickly by taking an additional penalty on your Climb Test. By worsening the Test’s Difficulty by –20, you can ascend or descend at your normal Move Rate instead of half your Move rate.';
+	}
+	else if (term == 'command'){
+        var result = 'Command (Basic)<br>Stat: Fellowship)<br>Command is used to make subordinates follow your orders. You may only use this Skill on those who are under your authority. A successful Command Test indicates that those whom you direct follow your instructions. On a failed Test, they either misinterpret the command or do nothing at all, or if you fail by five or more degrees, contradict your orders entirely. A Command Test can affect a number of targets equal to your Fellowship Bonus and your targets must be able to see and hear you clearly, and understand what you say. A Command Test is a Half Action for simple commands and a Full Action for more involved instructions.';
+	}
+	else if (term == 'common Lore'){
+        var result = 'Common Lore (Advanced, Investigation)<br>Stat: Intelligence)<br>Adeptus Arbites, Machine Cult, Administratum, Ecclesiarchy, Imperial Creed, Imperial Guard, Imperium, Tech, Underworld, War.Other Common Lores may be available at the GM’s discretion. Use the Common Lore skill to recall the habits, institutions, traditions, public figures and superstitions of a particular world, cultural group, organisation or race. This Skill does not represent scholarly learning (that is Scholastic Lore), nor obscure forbidden knowledge (that is Forbidden Lore), but rather the basics you learn by growing up or travelling extensively through a region. When making a Common Lore Test, you recall basic information about the subject. Each degree of success reveals a bit more information as determined by the GM. Adeptus Arbites:Knowledge of the various arms and sub-sects of the Arbites, including such things as their ranking structure and common procedures. Machine Cult:A general understanding of the symbols and practices of the Mechanicus, as well as such things as formal greetings and identifying rankings. Administratum:Broad knowledge of the inner workings, rules and regulations of the Administratum. Ecclesiarchy:Understanding of the hierarchy of the Cult of the Emperor, its rankings, greetings and general practices. Imperial Creed:Knowledge of the rites and practices of the Imperial Cult, the most common observances to the Emperor and the most well-known saints. Imperial Guard:Basic information about the ranking systems, logistics and structure of the Imperial Guard as well as such things as their common practices, both tactical and strategic. Imperium:Knowledge of the sectors, segmentums and most well-known worlds of theImperium. Tech:An understanding of simple litanies and rituals to sooth and appease machine spirits. Underworld:Understanding of organised crime and sedition within the Imperium. War:Knowledge of great battles, notable (and notorious) commanders and heroes, as well as famous stratagems. Using Common Lore takes no time at all. You either know something or you do not.';
+	}
+	else if (term == 'concealment'){
+        var result = 'Concealment (Basic) <br>Stat: Agility <br>Sometimes there’s no better option than to just hide from your enemies, whether it be from a rampaging Chaos Titan, a unit of corrupt Arbitraitors, or the guards of a townhouse that you have just violated. A successful Concealment Test may allow you to slip away, unseen and unnoticed, to continue your service to the God-Emperor. <br>Camouflage <br>Whenever you would attempt to conceal another character, you can Test Concealment and apply the results of your Test for that character. The effects of a successful Test remain only so long as that character has the benefit of cover, reduced visibility (fog, foliage, etc.), and does not move. If the concealed character moves, he is no longer concealed. <br>Sniping <br>Whenever you attack an enemy while successfully hidden, you automatically reveal your presence. You can attempt a Concealment Test as a Half Action to duck back under cover, but your opponents gain a +20 bonus to their Awareness Tests. <br>Taking Time to Hide <br>Normally a Concealment Test is a Half Action, representing you ducking behind cover or out of sight. However, if you take longer to conceal yourself, you have a better chance of remaining hidden. For every additional five minutes you take to hide yourself (or another), you gain a +10 bonus to the Concealment Test, to a maximum of +30 for taking 15 minutes to hide.';
+	}
+	
+	else if (term == 'contortionist'){
+        var result = 'Contortionist (Basic, Combat)<br>Stat: Agility <br>Don’t underestimate the Contortionist skill. With it, you’re not only harder to pin down, capture or generally tie up, but you can reach places others can’t follow. <br>Hiding in Odd Spaces <br>You may make a Contortionist Test in place of a Concealment Test if you use the Skill to hide in an odd place, such as an air vent or oil drum. Example In the effort to track down a bit of elusive information, you research in the depths of an Administratum building, requesting data-slates on various suspects. As normal, you Test Scholastic Lore. Since the investigation counts as Drudging, it normally takes 24 hours. However, you succeeded on the Test, roll a 2 on your 1d10 and add your Intelligence Bonus of 5 for a total of 7. The investigation now takes 17 hours. But, you are in a bit of a hurry so try to cut through the red tape. You make a Common Lore (Administratum) Test and get two degrees of success. The investigation is further reduced by four hours, to 13 hours. Still a long night, but not as long now that the bureaucrats are on your side. <br>Slippier than a Greased Kroot <br>The contortionist’s life is made all the more easier with the help of grease, helping him to slip out of hitherto impossible bonds. If you can first grease your body in some way, such as with oil, you gain a +10 bonus to all Contortionist Tests.';
+	}
+	
+	else if (term == 'deceive'){
+        var result = 'Deceive (Basic, Interaction) <br>Stat:Fellowship <br>Unlike the quick-fire distraction of Blather, Deceit is far subtler and more useful in the long term. It can be used to convince an enemy that you are there to help, a guard that you really have just found the corpse in the room, or a merchant to invest his hard-earned Thrones into your “scheme”. <br>Acting <br>When pretending to be someone other than who you are, such as when you use the Disguise skill, you may Test Deceive to enhance your disguise. A successful Test Opposed by your opponent’s Scrutiny grants you a +10 bonus to all Disguise Tests made for a number of minutes equal to your Fellowship Bonus. You may only use this feature if you are communicating with someone and you must make a successful Deceive Test before Testing Disguise. <br>Compel <br>This expanded function works just like the Charm function except it applies to Deceive Tests. For details, see Charm. <br>The Con <br>The Deceive skill can be used to “con” a victim. When conning—that is, misleading him for any length of time for your own gain—you may make a Deceive Test in place of another Interaction Skill, such as Charm. <br>Soothing Platitudes <br>Not all lies are bad, and sometimes a tactful white lie here or there can smooth the way. You may make a Deceive Test to convince another character of some falsehood, whether in the form of a compliment or a plain deception. If you succeed on an Opposed Deceive Test against your opponent’s Scrutiny Test, you gain a +10 bonus on Interaction Tests against that target for a number of minutes equal to your Fellowship Bonus.';
+	}
+	
+	else if (term == 'demolition'){
+        var result = 'Demolition (Advanced, Crafting) <br>Stat: Intelligence <br>Despite the constant drilling to be cautious and subtle by their masters, most Acolytes love to blow things up. The Demolition skill is useful for making sure it’s not themselves. <br>Booby-Traps <br>A booby-trap is an explosive device intended as a trap. It is planted as a normal explosive, but typically with a proximity trigger designed to go off when a door or package is opened. An Awareness Test Opposed by the Demolition Test to plant the booby-trap may be made to notice it before it goes off. <br>Detecting Explosives Normally an explosive device is located using the Awareness skill (to physically notice the device) or Security skill (to detect it using sensors). You may use the Demolition skill to find an explosive device (if you are using your own knowledge of planting explosives to find the most logical place where it could be placed). In all cases, the Test to detect the explosive is Opposed by the Demolition Test made to plant the explosive. <br>Explosive Entry <br>Sometimes, when there isn’t enough time to bypass a lock manually or a doorway proves too much of an obstacle, only a well-placed explosive charge will do. If you have a small amount of explosive, either in the form of a shaped charge or a carefully placed grenade, you may make a Demolition Test instead of a Security Test to bypass a lock. Success indicates that the lock or door is destroyed, allowing access but probably alerting any guards. Failure indicates that the lock is destroyed but the door remains sealed, the explosives failed to detonate, or that the explosion emanates outwards instead of inwards, catching anyone nearby in the blast. <br>Repurpose Explosive <br>Whenever you successfully locate a bomb or some other explosive device, you can alter its trigger mechanism so that it detonates when you want it to rather than when the original demolitionist wanted. Resolve this as an Opposed Demolitions Test, with a success on your part allowing you to reset the bomb as if you had planted it, thereby allowing you to make all decisions about the explosive as normal. A failed Test indicates that you are unable to alter the explosive without first defusing it. A catastrophic failure by five or more degrees indicates that the bomb goes off';
+	}
+	
+	else if (term == 'disguise'){
+        var result = 'Disguise (Basic) <br>Stat: Fellowship Whether pretending to be the servant of a corrupt noble, infiltrating a sinister cult or lying low in a vile dive, the Disguise skill is handy for helping you be someone you’re not. Of course there is more to a good disguise than appearances, but this Skill goes a long way to giving you the best possible chance of remaining undetected. <br>Disguise Voice <br>You can use the Disguise skill to alter your voice so that you sound like someone else. If you simply want to change the tone of your voice in a way that you are unrecognisable, simply Test Disguise as normal. If you want to alter your voice so that it matches someone else, you must spend at least a week (minus your Intelligence Bonus in days) training your voice by listening to and replicating recordings of the specific voice. Impersonating a voice is always a Difficult (–10) Test or Hard (–20) if the person is particularly well known. <br>Impersonation <br>Generally, a Disguise Test allows you to pretend to be a nameless, faceless individual, someone that may fit with expectations for a particular location or area. Such anonymity is useful in getting into places where ordinarily you couldn’t, but sometimes even a good disguise is not enough. Sometimes you must become someone else. You may use Disguise to impersonate another person. You must have prosthetics, a pict or holo-pict of the person’s likeness, and other useful tools. Impersonating a specific person is always a Hard (–20) Test or Very Hard (–30) if the person is particularly famous. <br>Look the Part <br>With an appropriate disguise, you can make your lies easier to digest, such as disguising yourself as a messenger when trying to bluff your way past the guards on the front door. If you make a successful Disguise Test you may gain a +10 bonus to any related Deceive Tests, so long as the disguise makes the deceit all the more believable.';
+	}
+	
+	else if (term == 'dodge'){
+        var result = 'Dodge (Basic, Combat) <br>Stat: Agility Who doesn’t like to be able to leap out of the way of lasfire or flying punches? Since Dodge enables you to avoid injury, negating attacks of just about any sort, it is a vital Skill for your survival. <br>Dive for Cover <br>Whenever you are allowed to make a Dodge Test to negate an attack, you may instead make a Difficult (–10) Dodge Test to dive behind cover. To use this feature, the cover must be within two meters of you. If the Test succeeds, you not only negate the attack, but also move behind the covering obstacle. <br>Protect Ally <br>You may also use Dodge to put yourself in the path of an attack made against an ally. Whenever you are adjacent to an ally and that ally is attacked, you may make a Difficult (–10) Dodge Test to swap your position with that of your ally. If the Test succeeds, you are attacked instead.';
+	}
+	
+	else if (term == 'drive'){
+        var result = 'Drive (Advanced, Operator) <br>Stat: Agility<br> Skill Group: Ground Vehicle, Hover Vehicle and Walker. Only those Acolytes from the most technologically backward of worlds are incapable of driving a vehicle, but those with the skills to drive under pressure are altogether rarer. But the ability to shake off pursuers through traffic or give chase in a speeder through dangerously built-up streets comes in very handy indeed. <br>Hiding in Traffic <br>Sometimes, when you’re being pursued in a vehicle, the easiest place to lose pursuers is to hide in plain sight—in traffic. So long as there are lots of other similar vehicles to hide amongst, you may make a Drive Test in place of a Concealment Test to Oppose your pursuers’ Awareness Test to spot you, driving casually and blending in with the traffic. <br>Forcing a Vehicle to a Halt <br>If you are close to another vehicle that is the same size or smaller, and you are both going at the same speed, you may make an Opposed Drive Test to force the other vehicle to a halt. If you succeed, the other driver must brake to avoid hitting you, is forced off the road or brought to a halt by virtue of colliding with your own vehicle. This may inflict Damage on one or both vehicles, but either way the vehicle is stopped. If you fail, it is your vehicle that is brought to sudden halt, letting the other vehicle escape unhindered.';
+	}
+	
+	else if (term == 'evaluate'){
+	var result = 'Evaluate (Basic, Investigation) <br>Stat: Intelligence <br>Knowing the true worth of an item puts an Acolyte at an advantage when bartering for goods or services. <br>Bartering <br>If you first successfully Evaluate an item, every degree of success grants you a +10 bonus on a subsequent Barter Test made to acquire or sell that item.';
+	}
+	
+	else if (term == 'forbidden Lore'){
+	var result = 'Forbidden Lore (Advanced, Investigation)<br>Stat: Intelligence<br>Skill Group:The Black Library, Cults, Daemonology, Heresy, Inquisition, Archeotech, Mutants, Ordos, Adeptus Mechanicus, Psykers, Warp andXenos. Forbidden Lore skills represent dangerous and often heretical knowledge gleaned from the myriad of unconventional sources anAcolyte often finds in his possession. This Skill represents a combination of scholarly learning and knowledge gained through practical experience. Simply possessing the Forbidden Lore skill is often sufficient to warrant termination at the hands of the Inquisition, and a character must tread carefully when revealing such knowledge. When making a Forbidden Lore Test, you recall basic information about the subject. Each degree of success reveals a bit more information as determined by the GM. A character that learns the Forbidden Lore skill in play, or who uses it to gain some insight into the mysteries of the galaxy, may also gain a number of Corruption or Insanity Points, depending on the danger the knowledge represents, at the GM’s discretion. The Black Library: Secret know-ledge of the Black Library, its forbidden contents, strange industries and the unspeakable pale, hairless things that toil within its walls. Cults: Knowledge of the most notorious Imperial Cults and some of their sub-sects and splinter cabals. Daemonology: Terrible comprehension of some of the recorded warp entities and their various manifestations. Heresy: Unpleasant appreciation for those acts and practices deemed heretical by the Imperium. Inquisition: A general understanding (often based on hearsay and rumour) of that most terrible and secret of organisations known as the Inquisition. Archeotech: Knowledge of the great tech devices of ancient times and clues to their function and purpose. Mutants: Covering the study of both stable and unstable mutations and some of their more unfortunate results. Ordos: Either Malleus, Hereticus or Xenos and granting some slightly more specialised knowledge of that particular ordo’s practices. Adeptus Mechanicus: An understanding of the followers of theMachine God, including such things as their observances, common beliefs and core philosophies. Psykers:  Skill in identifying the signs of psykers as well as the results of their powers and the extent of their capabilities. Warp: An understanding of the ways of the warp, especially its interaction with real space and how its tides and eddies can affect travel between the stars. Xenos: Knowledge of the most commonly encountered species of aliens within the Imperium. Using Forbidden Lore takes no time at all. You either know something or you do not, although the consequences for knowing such things can last a lifetime…. <br>Forbidden Goods <br>You may make a Forbidden Lore Test instead of an Evaluate Test, to calculate the (often priceless) value of a forbidden artefact or try to learn something about its history or purpose. Of course, peddling forbidden artefacts is often treated as a worse crime than simply possessing them, usually ending in execution... or worse. <br>Forbidden Procedures <br>A little knowledge can be a dangerous thing when dealing with forbidden lore, but can still ingratiate you with an organisation all the quicker. You may make a relevant Forbidden Lore Test prior to dealing with members of an organisation. If successful you gain a +10 bonus to Interaction Tests made when dealing with them.';
+	}
+	
+	else if (term == 'gamble'){
+	var result = 'Gamble (Basic)<br>Stat: Intelligence Whilst most Inquisitors would view playing cards as a waste of time, others concede it can be a great way to get in with the right circles, to say nothing of passing the time between missions. <br>Baleful Consequences <br>Sometimes being big or carrying a large stick can be useful for more than just getting people to do what you want— sometimes you can convince them that there are far worse consequences than losing money if they don’t let you win. Before making a Gamble Test, you may first make a Difficult (–10) Intimidation Test. On a success, you gain a +5 bonus on related Gamble Tests. On a failure, you take a –5 penalty on these Tests. <br>Off Guard <br>The wily Acolyte catches others off guard by lulling them into a false sense of security with an innocent hand of cards. You may make a Gamble Test to calm down tensions and ingratiate yourself with others. If successful, you gain a +10 bonus to your next interaction or Inquiry Test made with them, as they are likely to be more disposed towards you. <br>Risk <br>Life is a gamble, and your familiarity around the gaming table and understanding of the odds can aid you outside of a game of tiles. As a Full Action in combat, you may attempt a Hard (–20) Gamble Test. On a success, you gain a +10 bonus that can apply to any one Test made for the duration of the encounter. On a failure, you take a –10 penalty that applies to a single Test made during the encounter as determined by the GM. You may only use Risk once per encounter.';
+	}
+	
+	else if (term == 'inquiry'){
+	var result = 'Inquiry (Basic, Investigation)<br>Stat: Fellowship <br>As an agent of the Inquisition, your principle responsibility is investigation, seeking out the heretic and witch and bringing them to justice. Inquiry is a vital tool regardless of your career since it enables you to get a sense of the environment, learn clues and aid you in your ongoing search for enemies of the Imperium. <br>Asking Around <br>You may make an Inquiry Test to find out if anyone has been asking questions about you, your colleagues or anything else you might be on the hunt for. This is Opposed by the Inquiry Test of anyone asking such questions. <br>False Rumours <br>Just as you rely on rumours to find answers, so to can you plant false rumours to throw an enemy off your trail. You may make an Inquiry Test to plant such rumours for others to 231IX: Life as an Acolyte 232 IX: Life as an Acolyte discover. A successful Test increases the Difficulty of your opponent’s Inquiry Test by one plus one-step for each degree of success. <br>Lines of Inquiry <br>You can use Inquiry as a very light form of interrogation, attempting to find information by asking seemingly innocent questions of the subject. In place of an Interrogation Test, you may instead make a Hard (–20) Inquiry Test. You are never at risk of inflicting Fatigue or Damage with this Test.';
+	}
+	
+	else if (term == 'interrogation'){
+	var result = 'Interrogation(Advanced, Investigation)<br>Stat: Willpower<br>The key tool in an Inquisitor’s arsenal is interrogation—the ability to extract quality information from an unwilling subject. There is a fine line between interrogation and crude torture. In the case of the latter, subjects tend to reveal whatever their to tormentor wishes to hear, but in the case of the former, a skilled interrogator can tease out the darkest secrets by utilising a variety of devices, serums and techniques. Gear, environmental conditions and circumstances can all apply additional modifiers at the GM’s discretion. Make an Opposed Test, pitting your Interrogation skill against your opponent’s Willpower. If you beat your opponent, you get one answer plus one other answer for each degree of success. If your opponent wins the Opposed Test, you get nothing of worth. On a serious failure, you botch the procedure and inflict 1d10 plus your Willpower Bonus in Damage. If you fail by five or more degrees, you deal Damage as before but your subject gains a +30 bonus to Willpower Tests made to resist Interrogation. Each Interrogation Test inflicts one level of Fatigue on the target. An Interrogation Test consumes1d5 hours of time.';
+	}
+	
+	else if (term == 'intimidate'){
+	var result = 'Intimidate (Basic, Interaction)<br>Stat: Strength <br>Intimidation is neither big nor clever, but sometimes the ability to terrify an opponent into submission can come in useful for an Acolyte, getting far more done than with polite words alone. <br>Carry a Big Gun <br>You may back up your stern words with the threat of force, typically symbolised by a very large gun. So long as your weapon is bigger, or deals more Damage, than anything your opponent has, you gain a +10 bonus on your Intimidation Test. <br>FEAR THE INQUISITION! <br>You may make an Intimidation Test, coupled with liberal displays of authority and marks of office, to put the fear of the Inquisition into your opponent. On a successful Test you may add +10 to a subsequent Interrogation Test made against anyone who is at least familiar with the unpleasant rumours surrounding the Inquisition. Higher ranking members of the Inquisition, Daemon princes and Space Marine captains are less likely to be bothered by an Acolyte spouting such rhetoric, so the results of the Test are subject to the GMs discretion. <br>Fearsome Glare <br>Normally, using Intimidate is a Full Action, but sometimes you need to cow your opponent quickly to keep the target in place while attending to a more significant threat. You may Test Intimidate as a Half Action, but the Difficulty worsens by one-step. Furthermore, if you succeed, the effects of the Test last for just 1 Round. <br>Scare Factor <br>Whilst Intimidate normally requires you to be able to make yourself understood, you can attempt to scare or cow a group of people or creatures who do not speak your language (or any language) by the power of gesture and shouting alone. Using Intimidate in this way requires at least a Difficult (–10) Test. <br>Obey My Command! <br>You may abandon the tactfulness of command and resort to fear to ensure that your underlings obey. If you succeed on a Difficult (–10) Intimidate Test, you get a +5 bonus on all Command Tests against targets you intimidated for a number of minutes equal to your Strength Bonus. A failed Test indicates that you take a –5 penalty on such Tests.';
+	}
+	
+	else if (term == 'invocation'){
+	var result = 'Invocation (Advanced)<br>Stat: Willpower <br>Whilst it is not always possible to take the time to properly focus a Psychic Power, most psykers would strongly urge a budding Acolyte to make the time. Psykers who might have advocated the opposite, urging a carefree approach, are rarely sane enough to offer such advice. <br>Protective Invocation <br>You may use Invocation to draw psychic wards and sigils about you, summon up your mental energies and fortify your will against attack. Doing so requires an Invocation Test, and if successful you gain a +10 bonus for every degree of success to the next Willpower Test made to resist a Psychic Power. A failure by three or more degrees indicates you have botched the wards in a significant way, imposing a –10 penalty to your next Test instead. For every degree of failure above three, the penalty worsens by an additional –10.';
+	}
+	
+	else if (term == 'lip Reading'){
+	var result = 'LipReading(Advanced)<br>Stat: Perception<br>Use the Lip Reading skill to “listen in” on conversations that take place out of earshot. To use this Skill, you must have an unobstructed view of the speaker’s mouth and you must also be able to understand the language spoken. Distance is the biggest factor. The further away the subject is, the harder the Test. The base Difficulty is Challenging (+0), but it worsens by one step for every ten meters of distance. Note that equipment that magnifies vision can be used to offset this penalty and even provide bonuses. A successful Test reveals the general gist of the conversation, such as the person is talking about the weather, new tariffs at the space dock, and so on. Each degree of success reveals more specific details. A Lip Reading Test is a Full Action, though it lasts as long as the target speaks <br>Lip Speaking <br>You may use your Lip Reading skill to communicate discretely with another person in your line of sight, either hiding coded messages in regular conversation or mouthing a message to them. You only need to make a Lip Reading Test to hide words in normal conversation, not to simply mouth a message, but the recipient must make a Lip Reading Test either way to successfully interpret the message. If either Test is failed then the message is not conveyed properly.';
+	}
+	
+	else if (term == 'literacy'){
+	var result = 'Literacy(Advanced)<br>Stat: Intelligence)<br>The Literacy skill enables you to read any language you can speak. You normally do not need to Test Literacy for everyday instances of reading or writing, but the GM may call for a Literacy Test when you attempt to read a challenging dialect, poor penmanship, decipher obscure phraseology, archaic usage or unusual idioms. To read one page of text— approximately 750 words—a Literacy Test takes about a minute.';
+	}
+	
+	else if (term == 'logic'){
+	var result = 'Logic (Basic, Investigation)<br>Stat: Intelligence<br>Logic represents your proficiency at mathematics and your ability at problem solving. Logic Tests might be made to decipher a code or to solve a particularly troublesome equation. Logic is also used by Tech-Priests to incant mathematical rituals on machinery. Note that Logic is a purely theoretical Skill—Tech-Use is its practical counterpart. A Logic Test usually takes one minute of pondering and thinking, although especially difficult problems might require much longer';
+	}
+	
+	else if (term == 'medicae'){
+	var result = 'Medicae (Advanced)<br>Stat:Intelligence<br> Injury comes with the job of being an Acolyte and, for this reason, most teams include at least one member with some familiarity with Medicae, or at least have access to someone who does. Medicae enables you to patch up comrades, pull an ally from the brink of death, administer drugs and point out the best place to stick a needle to cause optimum pain. Diagnose You can diagnose what’s wrong with a patient by succeeding on a Medicae Test. The GM rolls for you in secret. A success reveals the most basic trouble, with each degree of success revealing an additional useful fact. A failure reveals nothing, while a failure by three or more degrees results in a misdiagnosis with often spectacularly awful results if the physician is allowed to treat the patient. Examples include poisoning, lopping off the incorrect limb, replacing organs unnecessarily and so on. First Aid As described in Dark Heresy, First Aid is one of the most common uses of the Medicae skill in that it allows you to treat an injured companion quickly, by staunching his wounds and getting him back on his feet. The amount of Damage removed with a First Aid Test depends on the Injury Level of the patient as shown on the following table: Injury Level Damage Removed Light Intelligence Bonus Heavy 1 point Critical 1 point Generally, a Medicae Test to provide First Aid is Challenging (+0), but the severity as well as the type of injury can also have an effect. As an optional rule, you can use the following Difficulties for performing First Aid on injured characters. This method requires players to keep track of the type of Damage they’ve taken. As well, a Medicae Test is made to repair a specific set of injuries, each Test attending to a particular type of injuries. The Injury Level applies to total Damage taken, so even if the target only took 1 point of Energy Damage and 6 points of Explosive Damage, that same target would still count as Heavily Injured. <br>Limits on First Aid: If you’re not using the optional rules described here, a character can benefit from First Aid just once per combat encounter, even when attended by multiple healers. If you’re using the optional rules, a character can receive First Aid for each type of Damage taken. So a character who has taken only Explosive Damage can only receive First Aid once, while a character who has taken Energy and Explosive Damage could received two uses of First Aid, one for each set of injuries <br>Other Uses <br>A person trained in Medicae can also attend to other injuries beyond Damage. <br>Blood Loss: A Difficult (–10) Medicae Test halts Blood Loss. If the subject is still fighting or has moved while suffering from Blood Loss, the Test is Very Hard (–30) instead. <br>Broken Limbs: A Difficult (–10) Medicae Test is required to safely remove a necrotised limb (which results from a failed Toughness Test made to resist limb loss from a broken limb). A failed Test deals 1d10 points of Damage to the limb location, ignoring Armour. Note that a failed Test also results in Blood Loss. <br>Install Implants and Bionic Components The Medicae skill also allows you the ability to install replacement limbs and organs. To do so, you must have the implant or bionic device handy. The Test Difficulty depends on the unit, its quality and the facilities available. The process of implantation always takes 2d10 days minus one day per point of the patient’s Toughness Bonus (to a minimum of one day). The following table describes the Test Difficulties for this procedure. All Difficulties are cumulative. If you have also have the Tech-Use skill, you gain a +10 bonus on Medicae Tests to install implants and bionic components.<br>Failed Tests <br>A failed Medicae Test to install an implant or bionic unit can have nasty consequences. A simple failure reduces the quality of the unit by one-step. If the unit was poor to begin with, the unit doesn’t work at all and could, in the case of a vital system, kill the patient. A failure by three or more degrees means that the limb breaks and the procedure seriously injures the patient, dealing 2d10 points of Rending Damage to the affected location (ignoring Armour Points). A failure by five or more degrees results in the death of the patient, the ruin of the device and 1d10 Insanity Points to all who witness the appalling mishap. <br>Extended Care <br>Extended care is covered in detail in Dark Heresy. However, if you are using the optional rules described under First Aid, the type of injury can affect the Medicae Test to treat patients. Use the predominant Damage type to determine the base Difficulty (e.g. the type of Damage that affects the target the most). In the case of two equal Damage types, use the worst modifier. Next, for each Damage type that afflicts the target beyond the first, reduce the Difficulty by one-step. This determines the base Difficulty of the Test. Unlike the system described in Dark Heresy, you must Test separately for each patient.<br>Pharmacy When administering a drug or treating a poison with Chem-Use, you may first make a Difficult (–10) Medicae Test to bring to bear your Medicae knowledge. On a success, you gain a +5 bonus to the Chem-Use Test. On a failure by three or more degrees you take a –5 penalty instead.';
+	}
+	
+	else if (term == 'navigation'){
+	var result = 'Navigation (Advanced)<br>Stat: Intelligence <br>Skill Group: Surface, Stellar Whether using a simple map and archeocompass, an innate knowledge of the landscape or the stars themselves, an Acolyte with the Navigation skill is rarely lost. <br>Throwing off Pursuers <br>Knowledge of the landscape coupled with careful planning allows you to plot a route designed to lose any pursuers. You may make a Navigation Test to assist a Tracking or Concealment Test made to lose a pursuer. <br>Tracking in Space <br>By using stellar cartography, calculating ship velocity and headings, and analysing recent disturbances, you can attempt to track the movements of a spacecraft. You may make a Difficult (–10) Navigation (Stellar) Test to track a spacecraft in the same way you would use the Tracking skill to track a creature over land.';
+	}
+	
+	else if (term == 'performer'){
+	var result = 'Performer (Advanced)<br>Skill: Fellowship <br>Skill Group: Dancer, Musician, Singer and Storyteller. Others may be available with the GMs discretion. As useful as the Performer skill is to entertaining fellow Acolytes on lengthy space voyages, it is perhaps more useful in distracting opponents or providing a useful cover story when undercover. <br>Innuendo <br>You may convey secret messages in your stories and songs. You may make a Difficult (–10) Performer (Singer or Storyteller) Test instead of a Cipher or Secret Tongue Test. The recipient of the message must have the correct Skill to comprehend the meaning as normal.';
+	}
+	
+	else if (term == 'pilot'){
+	var result = 'Pilot (Advanced, Operator)<br>Stat: Agility <br>Skill Group: Civilian Craft, Military Craft and Spacecraft. Whether snaking a lander through a hail of lasfire, or expertly piloting a guncutter in pursuit of a renegade ship, a skilled pilot is a vital component of nearly every Inquisitor’s retinue. <br>Shake Down <br>A popular manoeuvre for when a ship has unwelcome intruders onboard is for the pilot to jolt or jar the craft in such a way as to force all unsecured passengers to lose their footing. If the defenders can be forewarned somehow, this can give them an advantage in a fight. You make a Pilot Test, opposed by an Agility Test by everyone caught unawares. If successful, the hapless victim is knocked over and must spend his next Round getting up again. <br>Shadowing in a Vehicle <br>You may make a Difficult (–10) Drive or Pilot Test instead of a Shadowing Test when following another creature or vehicle in your own vehicle. Success does not necessarily mean your vehicle goes unnoticed, but it does mean that it appears inconspicuous.';
+	}
+	
+	else if (term == 'psyniscience'){
+	var result = 'Psyniscience (Advanced)<br>Stat: Perception <br>The Psyniscience skill is to psykers what Awareness is to mundane Acolytes. It allows them to detect nearby psychic disturbances and such forewarning allows them to avoid being surprised by a Daemon or psyker. <br>Detailed Disruption <br>Instead of merely detecting the number of locations or individuals causing a disruption in the immaterium, you may focus your senses to glean a little more information about them as follows. You may split your degrees of success between this chart and the chart on page 105 of Dark Heresy. <br>Degrees Result of Success One: The general strength of the phenomena (more or less powerful than you). Two or more: The precise strength, nature and origin of the phenomena. <br>Diminish Psychic Attack <br>Psyniscience allows you to perceive the intricate weaves of power involved in the manifestation of a Psychic Power. Whenever you are the target of a Psychic Power, you may make a Very Hard (–30) Psyniscience Test. If you succeed, you negate the effects of any of the power’s Overbleed. <br>Sense Lifeforms <br>Every living creature leaves a psychic signature in the warp, and careful use of Psyniscience can allow you to detect the presence or absence of normal creatures. You may make a Difficult (–10) Psyniscience Test in place of an Awareness Test';
+	}
+	
+	else if (term == 'scholastic Lore'){
+	var result = 'Scholastic Lore (Advanced, Investigation)<br>Stat: Intelligence <br>Skill Group: Archaic, Astromancy, Beasts, Bureaucracy, Chymistry, Cryptology, Heraldry, Imperial Creed, Judgement, Legend, Numerology, Occult, Philosophy and Tactica Imperialis. Many Acolytes spend a great deal of their life studying and researching, becoming experts in their field, from psykers with their knowledge of the occult and the warp, arbitrators with their fanatical knowledge of Imperial justice, and officers with their understanding of the minutiae of the Tactica Imperialis. It is precisely for this expertise that Inquisitors surround themselves with such adept Acolytes. <br>Practical Knowledge <br>Whilst Scholastic Lore mainly concerns the theoretical, quite often it is applicable to more practical pursuits. You may make a Scholastic Lore Test to gain a +10 bonus to a related Skill Test, or to assist another Acolyte using a related Skill. However, doing so greatly increases the time taken to carry out the Skill Test as no scholarly knowledge is recalled hurriedly. The related Skill Test increases in time from Rounds to minutes, minutes to hours and hours to days. If the time taken is already in days, then this is increased by a further 1d10 days';
+	}
+	
+	else if (term == 'scrutiny'){
+	var result = 'Scrutiny (Basic)<br>Stat: Perception <br>Whilst some would argue that an Inquisitor’s default frame of mind is to be suspicious, those Acolytes with the Scrutiny skill are better able to judge when a suspect genuinely warrants that suspicion. <br>Empathy <br>A successful Scrutiny Test allows you to discern a target’s disposition. This Test is Opposed by the target’s Deceive Test if he has something to hide. <br>Lying <br>You may use your knowledge of lying to help make your own lies all the more difficult to detect. If you first make a successful Scrutiny Test you gain a +10 bonus to a subsequent Deceive Test.';
+	}
+	
+	else if (term == 'search'){
+	var result = 'Search (Basic)<br>Stat: Perception Search is a useful Skill for Acolytes conducting investigations, helping turn up valuable clues or hidden evidence. Search differs from Awareness in that it involves a great deal of exploration, turning over items, opening doors and letting your instincts guide you as you toss a room. <br>Lengthy Searches <br>You may opt to take longer over a search, meticulously going over every square metre to find what you are looking for. For every additional five minutes you spend searching an area, you gain a +10 bonus on your Search Test (to a maximum of +30). Searching for Clues Search cannot be used as an Investigation Skill in its own right, but it can be used to assist an Investigation Skill. When investigating a crime scene, you may make a Search Test to attempt to notice any clues. Every degree of success reduces the Difficulty of a subsequent Investigation Test by one-step.';
+	}
+	
+	else if (term == 'secret Tongue'){
+	var result = 'Secret Tongue (Advanced)<br>Stat: Intelligence <br>Skill Group: Acolyte, Administratum, Ecclesiarchy, Gutter, Military and Tech. Other Secret Languages may be available at the GMs discretion. Just as with a cipher, many Acolytes use of Secret Tongues to quickly and discretely convey messages between one another. An Inquisitorial team who all know the same tongue are able to speak freely during battle or in other open situations without fear of being overheard or understood. <br>Ciphers <br>Although much of the meaning of a secret tongue requires body language and verbal intonations, it can be conveyed as part of a crude cipher. You may make a Difficult (–10) Secret Tongue Test instead of a Cipher Test. Alternatively, if you first make a Secret Tongue Test you gain +10 to a subsequent related Cipher Test, representing the multiple layers of meaning and code hidden within the message.';
+	}
+	
+	else if (term == 'security'){
+	var result = 'Security (Advanced)<br>Stat: Agility Many an Acolyte has saved himself the indignity of breaking down a door with judicious use of the Security skill. Security is used to bypass locks of all types and circumvent tough security systems to get into well-protected locations. You can also use Security to take control of security systems so they work for you instead of the original owner. <br>Hiding from Sensors <br>Sometimes it won’t be a person looking for you, but a sensor, such as an auspex. Unless the sensor relies on physical input, the Concealment skill is of no use. Instead you may use the Security skill in place of Concealment, if you have the means to disrupt or deceive the sensor. <br>Security Rigging <br>You can make a Security Test to set up and install a security system. Each degree of success increases the difficulty of any Test made to breach it by one. A Security Test to setup a security device takes one hour. <br>Security Surveillance <br>When using handheld scanners or larger security monitors, you may use Security instead of Awareness.';
+	}
+	
+	else if (term == 'shadowing'){
+	var result = 'Shadowing (Advanced)<br>Stat: Agility <br>Whether stalking a dangerous heretic through a packed market or following a contact through the deserted streets of a spaceport, Shadowing is useful for avoiding getting spotted. Shadowing differs from Concealment in that the latter involves hunkering down and hiding in one place, while the former is all about skulking and sneaking, creeping along while staying out of sight from your prey. Shadowing becomes far easier in certain environments. When threading through a dense crowd, or following along in a foggy night, you gain a bonus on your Test. Each factor that masks your presence confers a +10 bonus to a maximum of +30 for three factors. For example, you would get a +20 bonus when Shadowing a target at night through a crowded bazaar. <br>Evade Pursuit <br>Once you are aware that you’re being followed, you can use Shadowing to evade pursuit. Make a Shadowing Test Opposed by your opponent’s Awareness Test. If you beat your opponent a number of times equal to his Intelligence Bonus, you manage to slip away unseen.';
+	}
+	
+	else if (term == 'silent Move'){
+	var result = 'Silent Move (Basic)<br>Stat: Agility <br>The Inquisition carries out much of its work in the shadows, going about its investigations under the noses of the heretical and dangerous. An Acolyte who has the ability to move about unnoticed, entering suspects’ houses without them realising, is a highly useful asset. <br>Ambush<br> You can attempt to sneak up on your opponent and ambush him. So long as you are not in combat and have not yet been noticed, you may make a Silent Move Test Opposed by your opponent’s Awareness Test. If you are successful, you sneak up on your opponent as though you had successfully Feinted in combat, and so long as your next Action is a Standard Attack, it cannot be Dodged or Parried. If your next Action is anything other than a Standard Attack then this advantage is lost. <br>Sneak<br> You can make yourself practically invisible when Shadowing an opponent. If you first succeed with a Silent Move Test, you gain a +10 bonus on your Shadowing Test.';
+	}
+	
+	else if (term == 'sleight of Hand'){
+	var result = 'Sleight of Hand (Advanced)<br>Stat: Agility <br>Although derided as common street subterfuge, Sleight of Hand has many practical applications for the Acolyte, ranging from the ability to palm a small but useful object at a crime scene, to slipping your Inquisitorial rosette away when apprehended by heretics, or even pulling a pistol from a concealed holster unseen by your enemies. <br>Distraction <br>You may make a Sleight of Hand Test to dazzle audiences with tricks of the hand with cards, marbles, or whatever other prop you happen to have. Any allies nearby who can take advantage of the distraction may benefit from your successful Test as if you were assisting them.';
+	}
+	
+	else if (term == 'speak Language'){
+	var result = 'Speak Language (Advanced)<br>Stat: Intelligence<br>Skill Group: High Gothic, Hive Dialect, Low Gothic, Ship Dialect, Tribal Dialect. Other languages may be available at the GM’s discretion. The Speak Language skill is used to communicate with others using a common tongue. Although the people of the Imperium are widely scattered, they are united by an official tongue—that of Low Gothic. However, every world has its own local dialects and peculiarities, and sometimes even its own language. Under normal circumstances, Tests are unnecessary if all speakers know the language. High Gothic: The language of nobility, law and Ecclesiarchy liturgy. Hive Dialect: A debased form of Low Gothic unique to a given hive. Low Gothic: The common tongue of the Imperium. Ship Dialect: Code, slang and idiom unique to a given vessel. Tribal Dialect: The rough and primitive tongue spoken by the natives of a particular planet. A Speak Language Test is usually a Free Action. <br>Understanding Similar Languages <br>Even if you are not familiar with a particular language or dialect, you may make a Hard (–20) Speak Language Test to attempt to understand a sense of the meaning or intent. If you speak a related language or dialect (such as High Gothic to Low Gothic, Hive Dialect to Low Gothic, and so on) the Difficulty decreases to Difficult (–10). <br>Crude Ciphers <br>You can make a Speak Language Test to improvise a crude cipher, a sort of pidgin tongue intended to convey a coded message. If successful, you manage to make a message that makes sense and a Speak Language Test, or an Easy (+10) Logic or Scholastic Lore (Crypography) translates it.';
+	}
+	
+	else if (term == 'survival'){
+	var result = 'Survival (Advanced)<br>Stat: Intelligence <br>Whether lying in wait for Nurgle cultists in the foetid jungle of a death world or searching for shelter from a sandstorm on a desert planet, the Survival skill can be a lifesaver. <br>Hunting You may use the Survival skill in place of Tracking when hunting for animals in the wild. The Difficulty, however, worsens by one-step. It may not be used in urban areas or to track human or alien prey. <br>Snares <br>You can use the Survival skill to construct simple snares and traps to catch animals and other prey. To set the trap, you must succeed on Survival Test. The base Difficulty is Ordinary (+0), but you may increase the Difficulty in order to make it harder to disable or escape the snare. A typical snare triggers by location, meaning that the target steps into the area and is affected by the trap. Snares affect just one target at a time and can be made large enough to ensnare a mansized creature. Once sprung, the trap must be manually reset to work again. An intelligent creature may notice the trap before springing it by succeeding on an Awareness or Search Test. The Difficulty of this Test is Routine (+20), but if you also succeed on a Concealment Test, you can increase the Difficulty by one-step plus one-step for each degree of success. You may not retry the Concealment Test when constructing the snare. If the target locates the snare, it can either go around it or attempt to neutralise it. In the case of the latter, the target must succeed on a Survival Test against the same Difficulty made to set the snare. On a success, the snare is dismantled. Should the target spring the trap, it may make an Agility Test against the same Difficulty you faced to set the trap. On a success, the creature avoids the snare. On a failure, it is firmly caught and held until released. A caught creature can attempt a Contortionist Test once each hour to escape. Again, the Difficulty is the same as the one you beat to set the snare in the first place.';
+	}
+	
+	else if (term == 'swim'){
+	var result = 'Swim (Basic, Movement)<br>Stat: Strength <br>Opportunities for swimming in the 41st Millennium are often rare, but on occasion, this is a useful Skill to have, especially when exploring water worlds, tramping through sewers or escaping a wreck that landed in a large body of water. <br>Aquatic Combat <br>Whenever you fight while submerged in water, all Weapon Skill and Ballistic Skill Tests take a –20 penalty. As well, you must succeed on a Swim Test to move in this environment. When you Test your Swim skill, and you get two or more degrees of success, you reduce the Difficulty of your attack Tests to Difficult (–10). <br>Hiding Underwater <br>You can hide from a pursuer on land by diving into a body of water and waiting below the surface until they have passed by. If you do this you may use your Swim skill instead of Concealment. <br>Life-Saving <br>When another character gets into trouble in the water, you can dive in to help him out. If you reach the struggling character, you can pull him to safety by succeeding on a Swim Test, but the Difficulty worsens by one-step for the added bulk.';
+	}
+	
+	else if (term == 'tech-Use'){
+	var result = 'Tech-Use (Advanced)<br>Stat: Intelligence <br>Gear and equipment in the 41st Millennium is tricky to use, the machinespirits unruly and restless. Tech-Use allows you to placate these entities and make them more cooperative when working with devices of all kinds. <br>Cyber Wrangling <br>You may use your Tech-Use instead of Wrangling, but only when dealing with machines designed to look and act like beasts, such as a cyber-mastiff. <br>Technical Support <br>When another character’s Skill Test involves a piece of equipment, you may assist them using your TechUse skill, even if they are using a different Skill.';
+	}
+	
+	else if (term == 'tracking'){
+	var result = 'Tracking (Advanced)<br>Stat: Intelligence <br>Tracking can be a handy skill to have in a wide variety of situations, whether chasing an escaped cultist through the sewers, working out the number of intruders at a crime scene, or hunting a wild beast in the wilderness. <br>Escaping Pursuit <br>Whilst the most straightforward way of concealing tracks from a pursuer is to hide them using the Concealment skill, as a skilled tracker, you have several more tricks up his sleeve, such as backtracking by using your own tracks or disguising your tracks to resemble those of an animal. You can make a Tracking Test to conceal your tracks instead of Concealment. <br>Tracking Suspects<br> You may use the Tracking skill as an Investigation Skill in situations where it is important to work out who or what has been present at a site, when they were there and how many were there, as well as working out where they went next.';
+	}
+	
+	else if (term == 'trade'){
+	var result = 'Too much information, Systems unable to process. Im sorry. you will have to look in the book for details....<br> but heres a brief summary:<br>Trade(Advanced)<br>Skill Group: Agri (S), Apothecary (Int), Armourer (S), Artist (Ag), Cartographer (Ag), Cook (Int), Copyist (Int), Embalmer (Int), Mason (Ag), Merchant (Fel), Miner (S), Prospector (S), Scrimshawer (Ag), Smith (S), Soothsayer (Fel) Tanner (S), Technomat (Int), Valet (Fel) and Wright (Int). Others may be available at the GMs discretion.<br>Many Acolytes possess exceptional skills, either acquired before their service to the Inquisition or picked up during their employment. Of these, Trade skills are some of the most fascinating. If they possess the appropriate Skill, they can create unique gear and equipment, anything from a customised speeder to an illuminated manuscript, as well as countless other items far more interesting than a simple entry from the equipment lists. After all, would your players prefer to have infra-red goggles or enhanced “phaeton-pattern multi-goggles” that combine the abilities of the basic item plus that of a photo-visor? While the answer should be obvious, these items have a price in labour and cost, even to the trained tech-priest.<br>Trade Skills do far more than allow for simple Skill Tests; they represent the skill set necessary to modify or create things. If an Acolyte wants an armoured body glove, a longrange vox-caster or a two-handed shock mace, he needs the appropriate Trade Skill, or the Thrones to pay someone who does. Players use the Crafting rules found later in this chapter to create these kinds of items. Possession of these Skills also grants other advantages. <br>Agri: Used to grow, care and harvest crops and animals.<br>Apothecary: Used to blend and prepare herbal remedies.<br>Armourer: Used to create and maintain armour and weapons.<br>Artist: Used to create works of art.<br>Cartographer: Used to take accurate measurements and turn them into maps.<br>Cook: Used to create and identify food.<br>Copyist: Used to swiftly copy text, illuminate manuscripts and forge written material.<br>Embalmer: Used to prepare and preserve corpses.<br>Mason: Used to assess and construct stone buildings.<br>Merchant: Used to find, bargain and sell trade goods.<br>Miner: Used to extract minerals, maintain mines and identify common hazards.<br>Prospector: Used to find and identify valuable materials.<br>Scrimshawer: Used to inscribe patterns, text and imagery onto materials.<br>Smith: Used to forge metals into shape.<br>Soothsayer: Used to give the appearance of telling the future.<br>Tanner: Used to prepare and tan hides.<br>Technomat: Used to maintain mechanical and tech items, often without any understanding of a machine’s true purpose.<br>Valet : Used to refine the appearance, give droll asides and tend to the needs of superiors in a gentlemanly fashion.<br>Wright: Used to assess, design and construct buildings, vehicles and the like.<br>Trade:Lore<br>Standard success: Basic facts about an item, its name and properties<br> One degree: Process and materials used to create the item, its classification or group, or stellar region where created.<br> Two degrees: Origin of components used in construction, detailed information about its characteristics, or planet of creation. Three degrees: Substitutes for the item, means of amplifying its effects, or more or name of its creator. <br> An Acolyte with Trade skills is considered a member of the Trading Class for purposes of determining monthly income  This status may allow for interaction with citizens of a social status far beyond—or below—their means, along with the gratitude or ill-will that goes along with it! Cunning GMs can use these Skills as springboards for entire campaigns or as short, one-off adventures.';
+	}
+	
+	else if (term == 'wrangling'){
+	var result = 'Wrangling<br>(Advanced)<br>Stat: Intelligence)<br>This Skill may be used in order to ride domesticated animals of appropriate size. The Wrangling skill also allows you to care for and control domesticated animals, like bloodhounds, Spike Pigs, horses, Grox and the like. Routine care and feeding requires no Test. Tests are most commonly made to spot developing illnesses or signs of discomfort, or for special grooming (preparing a mount for a parade, for instance).Wrangling can also be used to train animals to perform tricks and obey simple commands. Properly training an animal takes some time. Tests should be made once a week during training. A simple trick can be learned with one successful Test, a moderately difficult trick can be learned with three successful Tests and a difficult trick can be learned with ten successful Tests. Common tricks include guarding, fetching, attacking, and so on. You may also use this Skill to befriend animals. Domestic animals are always friendly to you. Wild animals or those trained to be hostile (like attack dogs) can be calmed with a successful Test. GMs may impose penalties for particularly loyal or ornery animals. Wrangling is of no use against cyber-animals such as familiars, even if they are built to resemble an animal. A Wrangling Test takes a variable amount of time, depending on what the character is attempting to accomplish. Training an animal takes at least a week of hard work, whereas attempting to befriend an animal is a Full Action.<br>Riding Animals <br>Any animal that’s been trained can be ridden without having to Test Wrangling. You simply climb onto the mount (a Half Action) and ride off into the “setting suns”. Should the animal be unfriendly (i.e. it has not been trained), odds are that if you manage to get into the saddle, you won’t stay there for long. To calm such an animal so you can ride it, you must make a Wrangling Test with a Difficulty depending on the beast’s Disposition (set by the GM and accounting for your appearance, the animal’s mood and the circumstances of the encounter). On a successful Test, you may climb up and ride. On a failure, the beast objects and tries to throw you off, requiring a Difficult (–10) Agility Test. If you pass, you may attempt another Wrangling Test, otherwise you are thrown off (flying 1d5 meters in a random direction). To gain control over an uncontrolled beast, you must succeed on a number of Wrangling Tests equal to the mount’s Willpower Bonus. If you fail any of the Tests by four or more degrees, the beast is untamable and will never allow you to ride it; you’ll have to find another means of transport!';
+	}
+	
+	else if (term == 'air of authority'){
+	var result = 'Prerequisites: Fellowship 30.<br>You exude a natural aura of command, instilling subservience in all around you. On a successful Command Test, you may affect a number of targets equal to 1d10 plus your Fellowship Bonus. Such is the authority in your voice that even those who are not in your service jump to attention when you speak. You may attempt to get non-servants to follow your commands by making a Command Test with a –10 penalty.';
+	}
+	
+	else if (term == 'ambidextrous'){
+	var result = 'Prerequisites: Agility 30.<br>You can use either hand equally well. You do not take the normal –20 penalty for making attacks with your secondary hand. Special: If you have the Two-Weapon Wielder talent, the penalty for making attacks with both weapons in the same Turn drops to –10.';
+	}
+	
+	else if (term == 'armour of contempt'){
+	var result = 'Prerequisites: Willpower 40.<br>You drape yourself in the armour of scorn and hatred. Whenever you would gain Corruption Points, reduce the amount you would earn by 1. In addition, you may Test Willpower as a Free Action to ignore the effects of your accumulated Corruption for one Round.';
+	}
+	
+	else if (term == 'arms master'){
+	var result = 'Prerequisites: Ballistic Skill 30, Basic Weapon Training in at least two groups of weapons.<br>Such is your skill with a gun that you are able to pick up an unfamiliar weapon and use it as though you had trained with it for years. You can use ranged weapons you do not have training in at –10 rather than –20.';
+	}
+	
+	else if (term == 'assassin strike'){
+	var result = 'Prerequisites: Agility 40, Acrobatics.<br>You are like a serene dancer when engaged in combat, leaping and spiralling between dismembered corpses like some butcher ballerina. Whenever you engage an opponent and make a melee attack, you may make an Acrobatics Test to move at your Half Move rate as a Free Action. Your opponent may not take the customary free attack.';
+	}
+	
+	else if (term == 'autosanguine'){
+	var result = 'Ancient and blessed technology filters your blood. Handed down from generations past, your implants repair minor injuries. For the purposes of healing, you are always considered to be Lightly Wounded. In addition, you naturally heal at an increased rate, removing 2 points of Damage each day. Your autosanguinators also sooth the minor pains and sores caused by the blessed metal of your implants pressing upon your weak flesh. This has no game effect, but does make you slightly less irritable than before.';
+	}
+	
+	else if (term == 'basic weapon training'){
+	var result = 'Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP.<br>You have received Basic Weapon Training in a group of weapons, and can use them without penalty.';
+	}
+	
+	else if (term == 'battle rage'){
+	var result = 'Prerequisites: Frenzy.<br>Despite your frenzied nature, you remain in control when engaging in melee. You can spend reactions to Parry while Frenzied.';
+	}
+	
+	else if (term == 'berserk charge'){
+	var result = 'You hurl yourself at your enemies with reckless abandon, using the force of your Charge to add force to your strikes. When you make a Charge manoeuvre you gain a +20 bonus to Weapon Skill instead of the usual +10.';
+	}
+	
+	else if (term == 'binary chatter'){
+	var result = 'You are adept at controlling servitors. Gain a +10 bonus to any attempt to instruct, program or question servitors.';
+	}
+	
+	else if (term == 'blademaster'){
+	var result = 'Prerequisites: Weapon Skill 30, Melee Weapon Training.<br>Your mastery of sword and knife is unsurpassed and your blade always strikes true. When attacking with a sword or a knife of any type, including chainswords and power swords, you may re-roll a missed attack once per Round.';
+	}
+	
+	else if (term == 'blind fighting'){
+	var result = 'Prerequisites: Perception 30.<br>Through years of practice and heightening your senses, you no longer need to be able to see your opponents to be able to hit them. You take half the usual penalties when fighting in environments that obscure your vision, such as fog, smoke and darkness.';
+	}
+	
+	else if (term == 'bulging biceps'){
+	var result = 'Prerequisites: Strength 45.<br>Whereas a weaker man would be sent flying when using powerful weapons, your strong physique allows you to remain standing. You can fire a heavy weapon on semi- or autofire modes without first bracing.';
+	}
+	
+	else if (term == 'catfall'){
+	var result = 'Prerequisites: Agility 30.<br>You are nimble and balanced, like a cat, and are able to fall much greater distances unharmed than others might. Whenever you fall, you may Test Agility as a Free Action. On a success, and for every degree of success, reduce the distance fallen by a number of metres equal to your Agility Bonus for the purposes of determining the Damage dealt by the fall.';
+	}
+	
+	else if (term == 'chem geld'){
+	var result = 'A variety of chemical and surgical treatments have rendered you immune to the temptations of the flesh. Seduction attempts against you automatically fail, and the Difficulty of all Charm Tests made against you increase by one step (a Challenging (+0) Test becomes Difficult (–10) and so on). When you take this Talent you gain one Insanity Point.';
+	}
+	
+	else if (term == 'cleanse and purify'){
+	var result = 'Prerequisites: Basic Weapon Training (Flame).<br>Burn! Burn! Burn! None shall escape your fiery wrath! Targets exposed to your flamer attacks take a –20 penalty to avoid being hit.';
+	}
+	
+	else if (term == 'combat master'){
+	var result = 'Prerequisites: Weapon Skill 30.<br>Through a combination of reflex and perception you are able to keep many more opponents at bay in melee than a lesser skilled Acolyte might. Opponents fighting you in hand-to-hand gain no bonuses for outnumbering you.';
+	}
+	
+	else if (term == 'concealed cavity'){
+	var result = 'You have a small compartment hidden upon your person. This might be a pouch within your flesh, or a chamber fitted into one of your cybernetic implants. You may conceal one small item, no bigger than the palm of your hand, within this cavity. The compartment may be discovered on a Difficult (–10) Search Test. If the searcher employs additional technology, such as a medicae scanner or chem-sniffer, this difficulty is reduced to Ordinary (+10).';
+	}
+	
+	else if (term == 'corpus conversion'){
+	var result = 'Prerequisites: Psy Rating 2.<br>You can siphon the health of your physical body to fuel your powers. For every 2 points of Damage you voluntarily take, you may add your Willpower Bonus to your Power Roll. Using this Talent is a Free Action.';
+	}
+	
+	else if (term == 'counter-attack'){
+	var result = 'Prerequisites: Weapon Skill 40.<br>You are skilled at switching from defence to attack in the blink of an eye. When you successfully Parry an opponent’s attack, you may immediately make an attack against that opponent using the weapon with which you Parried. This attack takes a –20 penalty to the Test.';
+	}
+	
+	else if (term == 'crack shot'){
+	var result = 'Prerequisites: Ballistic Skill 40.<br>You are able to target your shots at the places where they will inflict more harm. When your ranged attack deals Critical Damage, you deal an extra 2 points.';
+	}
+	
+	else if (term == 'crippling strike'){
+	var result = 'Prerequisites: Weapon Skill 50.<br>You are able to land your blows in the spot where they will inflict the most harm. Whenever you deal Critical Damage to an opponent using a melee weapon, you may deal an additional 1d5–1 points.';
+	}
+	
+	else if (term == 'crushing blow'){
+	var result = 'Prerequisites: Strength 40.<br>Your melee strikes land with force enough to shatter bone. You add +2 to Damage you inflict in melee.';
+	}
+	
+	else if (term == 'dark soul'){
+	var result = 'Your soul is darkly stained, making you resilient to the effects of Corruption. Whenever you are called to make a Malignancy Test, you take half the normal penalty. See Chapter VIII: The Game Master, page 238 for details on Corruption.';
+	}
+		
+	else if (term == 'deadeye shot'){
+	var result = 'Prerequisites: Ballistic Skill 30.<br>You always hit an opponent right between the eyes… or wherever else you intended to hit him. When making a Called Shot, you take only a –10 penalty instead of the normal –20.';
+	}
+	
+	else if (term == 'decadence'){
+	var result = 'Prerequisites: Toughness 30.<br>Either through mental and physical conditioning or long years of abuse, your body has built up a tolerance to chemicals. When drinking alcohol or similar beverages, you do not pass out until you have failed a number of Toughness Tests equal to twice your Toughness Bonus. You also gain a +10 bonus to tests made to continue using drugs within 24 hours.';
+	}
+	
+	else if (term == 'deflect shot'){
+	var result = 'Prerequisites: Agility 50.<br>You are able to knock aside Thrown weapons and shots fired from Primitive weapons. You may spend a Reaction to Parry an incoming ranged attack so long as the attack is from a Primitive or Thrown weapon.';
+	}
+	
+	else if (term == 'die hard'){
+	var result = 'Prerequisites: Willpower 40.<br>t takes more than most to finish you off. When you suffer from Blood Loss, you may roll twice to avoid death.';
+	}
+	
+	else if (term == 'disarm'){
+	var result = 'Prerequisites: Agility 30.<br>You are able to knock your opponent’s weapons from their hands. When engaged with an opponent wielding a melee weapon, you may use a Full Action to disarm your foe by making an Opposed Weapon Skill Test. If you beat your opponent, he drops his weapon to his feet. Should you get three or more degrees of success, you not only disarm him but also take his weapon from him!';
+	}
+	
+	else if (term == 'discipline focus'){
+	var result = 'Prerequisites: Psy Rating 3<br>Talent Groups: Biomancy, Divination, Pyromancy, Telekinetics, Telepathy.<br>You devote a great deal of time and effort into mastering your Discipline. Choose one of your Disciplines. You gain a +2 to Power Rolls made to manifest any powers of this Discipline.';
+	}
+	
+	else if (term == 'disturbing voice'){
+	var result = 'You have a sinister and upsetting voice. This may be due to infrasonic cadences produced by a vox synthesiser, interrogation training or just an inborn air of malice. You gain +10 bonus to all Intimidate or Interrogation Tests when you use your voice. You take a –10 penalty to Fellowship Tests when dealing with persons who are likely to be off put by your manner (psykers, small children, nervous Grox and so on).';
+	}
+	
+	else if (term == 'double team'){
+	var result = 'You fight best shoulder to shoulder with a loyal ally. When ganging up on an opponent with an ally, you gain an additional +10 bonus to Weapon Skill Tests. If you both have this Talent you both gain an additional +10 bonus, for a total of +20. This bonus is in addition to the normal bonuses gained from outnumbering an opponent.';
+	}
+	
+	else if (term == 'dual shot'){
+	var result = 'Prerequisites: Agility 40, Two-Weapon Wielder.<br>You are able to focus the firepower of two guns to maximise the impact. When armed with two pistols, you can fire both simultaneously as a Full Action. Make a single Ballistic Skill Test. On a success, you hit the target with both shots.';
+	}
+	
+	else if (term == 'dual strike'){
+	var result = 'Prerequisites: Agility 40, Two-Weapon Wielder.<br>You are able to focus your melee attacks to maximise the impact. When armed with two melee weapons, you can attack with both simultaneously as a Full Action. Make a single Weapon Skill Test. On a success, you hit the target with both weapons.';
+	}
+	
+	else if (term == 'electrical succour'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>You call upon the sacred flow of energy to replenish your weak flesh. Whilst in contact with a functioning, powered machine, or fully charged battery, you may make an Ordinary (+10) Toughness Test. If you succeed, remove one level of Fatigue plus one additional level of Fatigue for each degree of success. This takes one minute of meditation and ritual incantation to activate.';
+	}
+	
+	else if (term == 'electro graft use'){
+	var result = 'You have the ability to use an electro graft to access data points and commune with machine spirits. This grants you a +10 bonus to Common Lore, Inquiry or Tech-Use Tests whilst connected to a data point.';
+	}
+	
+	else if (term == 'energy cache'){
+	var result = 'Prerequisites: Tech-Priest (Potentia coil).<br>You have learnt how to focus some of the power stored within your potentia coil. You no longer gain Fatigue from using Luminen Charge, Luminen Shock and Luminen Blast.';
+	}
+	
+	else if (term == 'exotic weapon training'){
+	var result = 'Talent Groups: All Exotic Weapons.<br>You have received Exotic Weapon Training in a single exotic weapon, and can use it without penalty.';
+	}
+	
+	else if (term == 'favoured by the warp'){
+	var result = 'Prerequisite: Willpower 35.<br>Whenever a Power Roll triggers Psychic Phenomena, you may roll two dice on that table and take the more favourable result.';
+	}
+	
+	else if (term == 'fearless'){
+	var result = 'Whether through fervent loyalty or a derangement of the mind, you are impossible to frighten or unnerve. You are immune to the effects of Fear and Pinning, but to disengage from combat or back down from a fight you must first succeed on a Willpower Test.';
+	}
+	
+	else if (term == 'feedback screech'){
+	var result = 'Prerequisites: Tech-Priest (Respirator Unit).<br>By muttering illogical formulae under your breath, you are able to foment rebellion within your vox synthesisers. Your audio circuits protest in a screeching blast of noise, shocking and distracting others in equal measure. All creatures, except Daemonic and machine-based, within a 30 metre radius must make a Willpower Test or lose a Half Action on their next Turn as they shudder, swear, cover their ears or otherwise react to the horrid noise. This is a Full Action and may not be used again for 1d5 Rounds while your audio circuits reset.';
+	}
+	
+	else if (term == 'ferric lure'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>You can call an unsecured metal object that you can see to your hand. You may summon objects of up to 1 kilogram per point of your Willpower Bonus. The object must be within a 20 metre radius. To use this Talent, you must succeed on a Willpower Test as a Full Action.';
+	}
+	
+	else if (term == 'ferric summons'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil), Ferric Lure.<br>You can call an unsecured metal object that you can see to your hand. You may summon objects of up to 2 kilograms per point of your Willpower Bonus. The object must be within a 40 metre radius. You must make a Willpower Test and spend a Full Action to enact this rite.';
+	}
+	
+	else if (term == 'flagellant'){
+	var result = 'You have dedicated your pain to the service of the Emperor. Each day, you must spend twenty minutes praying and inflicting 1 point of Damage upon yourself. You may not treat this Damage or allow it to be healed. Once you have castigated your flesh, you gain a +10 bonus to Willpower Tests made to resist mind control or Malignancy. Additionally, if you have the Frenzy talent, you may enter a frenzied state as a Free Action. Should you fail to flagellate yourself on any given day, you take a –5 penalty to all Tests due to shame and guilt.';
+	}
+	
+	else if (term == 'foresight'){
+	var result = 'Prerequisites: Intelligence 30.<br>You are adept at identifying the consequences of any action. If you take some time to consider what you are doing, you can deduce the best action for success. You may spend ten minutes contemplating a problem to gain a +10 bonus to your next relevant Intelligence Test.';
+	}
+	
+	else if (term == 'frenzy'){
+	var result = 'You can incite yourself into a frothing rage. You must spend one Round psyching yourself up (howling, beating yourself or injecting psychosisinducing drugs). The next round you lose control and go berserk, gaining a +10 bonus to Strength and Willpower but a –10 penalty to Weapon Skill and Intelligence. You must attack the nearest enemy in melee combat and you may not flee, retreat or Parry. When possible, you must use the All-Out Attack Manoeuvre. You remain frenzied for the duration of the combat. Some creatures, particularly certain types of Daemon, do not need to spend a Round inciting the frenzy—they are either permanently Frenzied or can Frenzy at will. Unless you have a Talent that allows you to do so, you may not use Psychic Powers whilst in Frenzy.';
+	}
+	
+	else if (term == 'furious assault'){
+	var result = 'Prerequisites: Weapon Skill 35.<br>Your blows follow one another in quick succession, raining down on your opponents like fiery bolts. Whenever you hit an opponent whilst using the All-Out Attack Manoeuvre, you may spend your Reaction to make an extra attack (this extra attack retains any bonuses or penalties of the original attack).';
+	}
+	
+	else if (term == 'gun blessing'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>With a wave you can unjam a number of guns equal to your Intelligence Bonus. You may bless any weapon in a 10 metre radius. To do so, make an Intelligence Test. A success indicates that you have rallied the spirits of the weapons. This blessing is a Full Action.';
+	}
+	
+	else if (term == 'gunslinger'){
+	var result = 'Prerequisites: Ballistic Skill 40, Two- Weapon Wielder.<br>You are ready for anything when you have a pistol in each hand. When so armed, you reduce the penalty for fighting with two weapons by –10. If you have the Ambidextrous talent, you take no penalty when firing both weapons.';
+	}
+	
+	else if (term == 'hard target'){
+	var result = 'Prerequisites: Agility 40.<br>The best way to stay alive is to keep on moving, no matter what might come your way. Whenever you Charge or Run, all opponents take a –20 penalty to Ballistic Skill Tests made to hit you with a ranged weapon. This penalty lasts until the start of your next Turn.';
+	}
+	
+	else if (term == 'hardy'){
+	var result = 'Prerequisites: Toughness 40.<br>For the purposes of removing Damage, you are always considered to be Lightly Wounded.';
+	}
+	
+	else if (term == 'hatred'){
+	var result = 'You have reason to hate one particular race or organisation, and your malice hones your melee attacks. Choose one race or group from those listed above. When fighting opponents that qualify as members of that group, you gain a +10 bonus to all Weapon Skill Tests made to attack them.';
+	}
+	
+	else if (term == 'heavy weapon training'){
+	var result = 'Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP.<br>You know how to use one particular type of heavy weapon, and can use weapons of that type without penalty.';
+	}
+	
+	else if (term == 'heightened senses'){
+	var result = 'Talent Groups: Sight, Sound, Smell, Taste, Touch.<br>One of your senses is better than average. When you gain this Talent, select one of the five senses. You gain a +10 bonus to any Tests involving this sense. Note that Heightened Senses (Sight) does not add its bonus to Ballistic Skill tests';
+	}
+
+	else if (term == 'hip shooting'){
+	var result = 'Prerequisites: Ballistic Skill 40, Agility 40.<br>You are able to shoot whilst on the move. As a Full Action, you may simultaneously move up to your Full Move rate and make a single attack with a pistol.';
+	}
+	
+	else if (term == 'independent targeting'){
+	var result = 'Prerequisites: Ballistic Skill 40.<br>You are skilled enough with firearms that you can fire in two directions at once. When firing two weapons at once, you may attack targets that are more than 10 metres apart.';
+	}
+	
+	else if (term == 'insanely faithful'){
+	var result = 'You take refuge in your madness. When rolling to determine the effects of Shock, you may roll twice and take the better result.';
+	}
+	
+	else if (term == 'into the jaws of hell'){
+	var result = 'Prerequisites: Iron Discipline.<br>Such is the fervour and loyalty you inspire in your followers that they would follow you wherever you lead, even in search of the dread Tyrant Star. Whilst you are visible to them, your minions are immune to Fear and Pinning.';
+	}
+	
+	else if (term == 'iron discipline'){
+	var result = 'Prerequisites: Willpower 30, Command.<br>Not through mercy and kindness but through a stern demeanour and a sense of justice do you inspire loyalty in your followers. So long as you are visible to them, your minions may reroll failed Willpower Tests made to resist Fear and Pinning.';
+	}
+	
+	else if (term == 'iron jaw'){
+	var result = 'Prerequisites: Toughness 40.<br>You are made of sturdy stuff and can weather minor blows. When you become Stunned you may make a Toughness Test to shrug off its effects.';
+	}
+	
+	else if (term == 'jaded'){
+	var result = 'Prerequisites: Willpower 30.<br>You have seen the worst the galaxy has to throw at you to the point that you are acclimatised to the worst horrors. You never gain Insanity Points from the sight of blood, death or violence, or indeed any mundane horror. Supernatural terrors still affect you as normal, however.';
+	}
+	
+	else if (term == 'leap up'){
+	var result = 'Prerequisites: Agility 30.<br>You are hard to keep down. You may stand up as a Free Action.';
+	}
+	
+	else if (term == 'light sleeper'){
+	var result = 'Prerequisites: Perception 30.<br>You are a light sleeper and remain alert when most would be fast asleep. You are always assumed to be awake, even if you are asleep, for the purposes of making Awareness Tests, being Surprised or getting up in a hurry. The downside is that you often feel tired during the day and as a result are grumpy or distracted.';
+	}
+	
+	else if (term == 'lightning attack'){
+	var result = 'Prerequisites: Swift Attack.<br>As a Full Action, you may make three melee attacks on your Turn. This Talent replaces Swift Attack. You may not use the Dual Strike talent during a Lightning Attack Full Action.';
+	}
+	
+	else if (term == 'lightning reflexes'){
+	var result = 'You react like a flash of lightning. When rolling for Initiative, you add twice your Agility Bonus to the roll of 1d10.';
+	}
+	
+	else if (term == 'litany of hate'){
+	var result = 'Prerequisites: Hatred (any).<br>You are so impassioned in your hatred that you can rouse others to similar heights of emotion. As a Full Action, you may make a Charm Test to extend the effects of your Hatred talent to those around you. A successful Test grants a +10 bonus to Weapon Skill Tests to one target per point of your Fellowship Bonus when fighting your hated foes. The effects last for the duration of the encounter.';
+	}
+	
+	else if (term == 'logis implant'){
+	var result = 'You may utilise analytical circuits to calculate trajectory and reactions to a preternatural extent. Your ability to read possible outcomes lets you anticipate the movement of your opponents. As a Reaction you may make a Tech-Use Test to activate your Logis Implant. Note that this uses up your Reaction for the Round. Until the end of your next Turn, you gain a +10 bonus to all Weapon Skill and Ballistic Skill Tests. Each successful use of this Talent causes one level of Fatigue.';
+	}
+	
+	else if (term == 'luminen blast'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>With the proper prayer and projection of will, you are able to strike at the enemies of the Omnissiah. Using your electoo inductors, you may create a crackling ball of bio-electrical energy that you may fling at your foes. On a successful Ballistic Skill Test, you may direct this energy against a single target within 10 metres. The target takes Energy Damage equal to 1d10 plus your Willpower Bonus.<br>Each time you use this Talent, you gain a level of Fatigue.';
+	}
+	
+	else if (term == 'luminen charge'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>You have learnt how to lend your life force to technology. On a successful Toughness Test you may use your bio-electrical field to recharge or power machinery. This takes one minute of meditation and ritual incantation to activate. The Difficulty of the Toughness Test varies depending on the nature of the technology. Note that at the GM’s discretion, some technology is simply too arcane, broken or power-hungry for you to be able to activate. Each time you use this Talent, you gain a level of Fatigue.';
+	}
+	
+	else if (term == 'luminen shock'){
+	var result = 'Prerequisites: Tech-Priest (Electoo inductor/Potentia coil).<br>By focusing your bio-electrical energy through electoo inductors, you are able to damage your opponents. You must touch your enemy for this ability to work. In combat, you must either make a successful Weapon Skill Test or be Grappling to deliver the blast. Each Luminen Shock deals 1d10+3 points of Energy Damage. Each time you use this Talent, you gain a level of Fatigue.';
+	}
+	
+	else if (term == 'maglev grace'){
+	var result = 'Prerequisites: Tech-Priest (Potentia coil).<br>By long hours of rote learning, you have mastered one of the miracles of the Omnissiah. By spending a Half Action, you may hover 20–30 centimetres off the ground for a number of minutes equal to 1d10 plus your Toughness Bonus. You may move at your normal walking pace and must employ a Half Action each round to concentrate on maintaining the rite. You may activate this rite whilst falling to slow your rate of descent. Treat all falling Damage as 1d10+3 Impact Damage. Each Maglev Grace exhausts the power stored in your potentia coil, and thus you may only use this rite once in every twelve hour period.';
+	}
+	
+	else if (term == 'maglev transcendence'){
+	var result = 'Prerequisites: Tech-Priest (Potentia coil), Maglev Grace.<br>Devotion to the Machine God has granted you greater knowledge of miracles. As a Half Action, you may hover 20-30 centimetres off the ground for a number of minutes equal to 2d10 plus your Toughness Bonus. You may move at your normal running speed and must employ a Half Action each Round to concentrate on maintaining your rite. You may activate this rite whilst falling to produce a controlled descent. Provided that this rite is active when you reach the ground, then you take no Damage from falling. You may enact this rite twice in every twelve hour period.';
+	}
+	
+	else if (term == 'marksman'){
+	var result = 'Prerequisites: Ballistic Skill 35.<br>Distance is no object with a gun in your hand, and you are just as adept at picking off far away targets as those nearby. You suffer no penalties for shooting at Long or Extended range.';
+	}
+	
+	else if (term == 'master chirurgeon'){
+	var result = 'Prerequisites: Medicae +10.<br>You are trained in the most advanced medical techniques known to man. You gain a +10 bonus on all Medicae Tests. If you are treating a Heavily or Critically Wounded patient, a successful Test heals 2 Wounds instead of the normal 1. If this character is in danger of losing a limb from a Critical Hit, you also provide the patient with a +20 bonus to the Toughness Test to resist limb loss.';
+	}
+	
+	else if (term == 'master orator'){
+	var result = 'Prerequisites: Fellowship 30.<br>You are skilled at speaking to large audiences. Your Fellowship Tests and Fellowship-based Skill Tests can affect 10 times the normal number of people.';
+	}
+	
+	else if (term == 'mechadendrite use'){
+	var result = 'Prerequisites: Tech-Priest (Cyber Mantle/Cranial Circuitry).<br>Talent Groups: Gun, Manipulator, Medicae, Optical, Utility.<br>You have been given the appropriate training, initiation and hypnodoctrination to use a particular type of mechadendrite.';
+	}
+	
+	else if (term == 'meditation'){
+	var result = 'By putting your mind at rest and entering a trance you can repair the hurts of your body. You must succeed on a Willpower Test. If so, for every ten minutes you remain in a trance, you remove one level of Fatigue.';
+	}
+	
+	else if (term == 'melee weapon training'){
+	var result = 'Talent Groups: Primitive, Chain, Shock, Power.<br>You have received basic training in a group of hand-to-hand weaponry, and can use them without penalty.';
+	}
+	
+	else if (term == 'mental fortress'){
+	var result = 'Prerequisites: Willpower 50, Strong Minded.<br>You are trained to aggressively resist psychic attacks. Whenever you are the target of a psychic attack, you force the psyker to make a Willpower Test. On a failure, the psyker takes 1d10 points of Damage plus 1 Damage per point of your Willpower Bonus. This Damage is considered Impact Damage, directed at the head (more specifically, the face). The psyker can reduce this Damage by an amount equal to his Willpower Bonus. This Damage bypasses armour and any Toughness Bonus.';
+	}
+	
+	else if (term == 'mental rage'){
+	var result = 'Prerequisites: Frenzy.<br>You channel your madness and hate into your Psychic Powers. You may use your Psychic Powers whilst in a Frenzied state.';
+	}
+	
+	else if (term == 'mighty shot'){
+	var result = 'Prerequisites: Ballistic Skill 40.<br>You know how to blast away with a gun to cause the most damage to a target. You add +2 to Damage you inflict with a ranged weapon.';
+	}
+	
+	else if (term == 'mimic'){
+	var result = 'You have an extraordinary ability to copy another person\'s voice patterns. This may be due to implanted vox synthesisers, training or natural Talent. You must have listened to your target for at least one hour in order to study their voice properly. You must also understand their language and be of the same race (a human, for example, cannot convincingly copy an Ork). Listeners must succeed on a Difficult (+10) Scrutiny Test to realise that you are not the person you are mimicking. If you have based your voice patterns on anything other than "live" conversations where you are in the same room as your target (for example vox recordings, or commlink conversations), the Difficulty of this Scrutiny Test is reduced to Challenging (+0). Note this does not make you look like your target; you merely sound like them. If a listener can clearly see you are not the person you are copying, your deception automatically fails.';
+	}
+	
+	else if (term == 'minor psychic power'){
+	var result = 'Talent Groups: All Minor Psychic Powers.<br>You have acquired an additional psychic ability. You gain one Minor Psychic Power.';
+	}
+	
+	else if (term == 'nerves of steel'){
+	var result = 'You are able to remain calm, even when bullets fly past and bombs fall around you. You may re-roll a failed Willpower Test to avoid or recover from Pinning.';
+	}
+	
+	else if (term == 'orthoproxy'){
+	var result = 'You have learnt to draw mental fortitude from a liturgical circuit buried deep within your skull. You may "tune out" mind control attempts by concentrating on the prayers recited by the proxy unit. This grants you a +20 bonus to Willpower Tests made to resist mind control or interrogation.';
+	}
+	
+	else if (term == 'paranoia'){
+	var result = 'You are always on the look out for danger and secretly know that the galaxy is out to get you. You gain a +2 bonus on Initiative rolls. In addition, the GM may secretly Test your Perception to see if you notice hidden threats. Others, however, may find your constant muttering and twitchy looks unnerving.';
+	}
+	
+	else if (term == 'pistol training'){
+	var result = 'Talent Groups: Bolt, Flame, Las, Launcher, Melta, Plasma, Primitive, SP.<br>You have received training in a group of pistols and can use them without penalty.';
+	}
+	
+	else if (term == 'power well'){
+	var result = 'Prerequisites: Psy Rating 2.<br>Power suffuses your being, allowing you to manifest powers more easily. When manifesting powers, you gain a +1 bonus to your Manifesting rolls. You may select this Talent multiple times. Its effects are cumulative.';
+	}
+	
+	else if (term == 'precise blow'){
+	var result = 'Prerequisites: Weapon Skill 40, Sure Strike.<br>You are skilled at making difficult strikes. When making a Called Shot with a melee weapon, you do not incur the normal –20 penalty.';
+	}
+	
+	else if (term == 'prosanguine'){
+	var result = 'Prerequisites: Autosanguine.<br>By an act of will, you speed the workings of your autosanguinators. Once every twelve hours you may make a Tech- Use Test. On a success, you remove 1d5 points of Damage. If you roll a 96-100 however, in addition to failing, you overstrain your implants. They cease to function for one week. For that time you are unable to use this Talent, and gain none of the benefits of the Autosanguine talent. Once the week is over, both Talents are restored. Prosanguination takes ten minutes of meditation and ritual incantation to activate.';
+	}
+	
+	else if (term == 'psy rating 1'){
+	var result = 'You have unlocked your Psychic Powers. Select a number of Minor Psychic Powers equal to one-half your Willpower Bonus (round up) from those described in Chapter VI: Psychic Powers. You gain a Psy Rating of 1 and roll one dice and add your Willpower Bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psy rating 2'){
+	var result = 'Prerequisites: Psy Rating 1 .<br>You have advanced knowledge of Psychic Power. Select a number of Minor Psychic Powers equal to half your Willpower Bonus (round up). You now have a Psy Rating of 2 and may roll up to two dice and add your Willpower bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psy rating 3'){
+	var result = 'Prerequisites: Psy Rating 2.<br>Your psychic abilities grow in power and proficiency. Select one Discipline. Gain one power from this Discipline. You also gain a number of Minor Psychic Powers equal to one-half your Willpower Bonus (round up). You now have a Psy Rating of 3 and may roll up to three dice and add your Willpower bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psy rating 4'){
+	var result = 'Prerequisites: Psy Rating 3.<br>You have distinguished yourself by your skill with psychic energy and the breadth of your knowledge of Psychic Powers. Gain a number of Discipline Powers in any Discipline that you know equal to one-half your Willpower Bonus and the same number of Minor Psychic Powers (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline. You now have a Psy Rating of 4 and may roll up to four dice and add your Willpower bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psy rating 5'){
+	var result = 'Prerequisites: Psy Rating 4.<br>You are among the most powerful psykers in the Imperium. Gain a number of Discipline powers in any Discipline that you know equal to one-half your Willpower Bonus (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline.You now have a Psy Rating of 5 and may roll up to five dice and add your Willpower bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psy rating 6'){
+	var result = 'Prerequisites: Psy Rating 5.<br>You have reached perhaps the greatest human potential with psychic powers and few can compare with your mastery. Gain a number of Discipline Powers in any Discipline that you know equal to one-half your Willpower Bonus and the same number of Minor Psychic Powers (round up). Alternatively, instead select one new Discipline and gain one power from this Discipline. You now have a Psy Rating of 6 and may roll up to six dice and add your Willpower bonus when manifesting Psychic Powers.<br>Special: If your Willpower Bonus later increases, you do not retroactively gain additional powers.';
+	}
+	
+	else if (term == 'psychic power'){
+	var result = 'Talent Groups: All Psychic Powers.<br>You have acquired an additional Psychic Power. You gain one power of any Discipline you know.';
+	}
+	
+	else if (term == 'quick draw'){
+	var result = 'You are quick to the draw, able to have a weapon in your hand and ready for combat in the blink of an eye. You can Ready as a Free Action when you are armed with a Pistol or Basic class ranged weapon, or a melee weapon that can be wielded in one hand.';
+	}
+	
+	else if (term == 'rapid reaction'){
+	var result = 'Prerequisites: Agility 40.<br>You have a hair trigger and react to a change in any situation in an instant. When Surprised or ambushed, you may make an Agility Test to act normally.';
+	}
+	
+	else if (term == 'rapid reload'){
+	var result = 'You have spent so long practising weapons drills that you can reload a gun in an instant. All reload times are reduced by half (round down)—so a Half Action reload become a Free Action, a Full Action reload becomes a Half Action and so on.';
+	}
+	
+	else if (term == 'resistance'){
+	var result = 'Talent Groups: Cold, Fear, Heat, Poisons, Psychic Powers.<br>Whether through past exposure, gruelling physical training or luck of genetics, you are highly resistant to a particular thing. When you pick this Talent select a group to be resistant to. You gain a +10 bonus when making a test to resist or avoid the object of your resistance.';
+	}
+	
+	else if (term == 'rite of awe'){
+	var result = 'Prerequisites: Tech-Priest (Respirator Unit).<br>You may recite an infrasonic liturgy that causes awe and fear. All humans within a 50 metre radius regardless of their ability to hear, feel a sense of dread and religious guilt. Alongside these emotional effects, all humans take a -10 penalty to their next Skill Test. Characters may make a Willpower Test to shake off these effects. Whilst incanting the rite, you may not talk on any additional frequency. The rite is two minutes long, and it is considered very bad form to break off incantations at any point within the liturgy. Note that humans without auditory implants cannot hear infrasonic sound, and thus will assume you are not speaking.';
+	}
+	
+	else if (term == 'rite of fear'){
+	var result = 'Prerequisites: Tech-Priest (Respirator Unit).<br>You may recite an infrasonic dirge, which causes terror within the weak. All humans, regardless of their ability to hear, within a 50 metre radius consider you to have a Fear Rating of 1. Whilst incanting the dirge, you may not talk on any additional frequency. The rite is two minutes long, and it is considered very bad form to break off incantations at any point within the liturgy. Note that humans without auditory implants cannot hear infrasonic sound, and thus will assume you are not speaking.';
+	}
+	
+	else if (term == 'rite of pure thought'){
+	var result = 'Prerequisites: Tech-Priest (Cranial Circuitry).<br>You have replaced the creative right half of your brain with a cogitator. You no longer feel emotion, and are instead filled with the cold purity of logic. You are now immune to Fear, Pinning and any effects that cause emotional disturbance. Others now find you disturbing to say the least. Your GM will remove any Mental Disorders that are no longer relevant, and grant you new ones of equal severity.';
+	}
+	
+	else if (term == 'sharpshooter'){
+	var result = 'Prerequisites: Ballistic Skill 40, Deadeye Shot.<br>You are skilled at making difficult shots. When making a Called Shot you do not incur the normal –20 penalty. This Talent replaces Deadeye Shot';
+	}
+	
+	else if (term == 'sound constitution'){
+	var result = 'You are able to absorb more damage before you die. You gain an additional Wound. If your advance scheme allows it, you may purchase this Talent multiple times';
+	}
+	
+	else if (term == 'sprint'){
+	var result = 'You are able to put on a burst of speed to get out of—or into—trouble fast. When taking the Full Move action, you may move an extra number of metres equal to your Agility Bonus. When taking the Run action, you may double your Movement for one Round. If you use this Talent two turns in a row, you gain one level of Fatigue.';
+	}
+	
+	else if (term == 'step aside'){
+	var result = 'Prerequisites: Agility 40, Dodge.<br>You are quick at getting out of the way of attacks. You may make an additional Dodge once per Round. In effect this gives a character a second Reaction that may only be used to Dodge, thus allowing them to make two Dodges in a Turn. Note they may still only attempt a single Dodge against any one attack.';
+	}
+	
+	else if (term == 'street fighting'){
+	var result = 'You are a master of dirty tricks such as the low punch and the knife in the gut. When dealing Critical Damage with an unarmed attack or knife, you deal +2 points of Damage.';
+	}
+	
+	else if (term == 'strong minded'){
+	var result = 'Prerequisites: Willpower 30, Resistance (Psychic Powers).<br>Your mind is like a fortress guarded against psychic attack. You may reroll failed Willpower Tests to resist any Psychic Powers that affect your mind. Psychic Powers that have a physical effect, such as Telekinesis, are unaffected by this Talent.';
+	}
+	
+	else if (term == 'sure strike'){
+	var result = 'Prerequisites: Weapon Skill 30.<br>You strike with precision, landing your blows wherever you intend them to hit. When determining where you hit an opponent with a melee attack, you may use the dice as you rolled them or reverse them, choosing the location you prefer. For example, Beam rolls a 37 to hit an Ork. Ordinarily, Beam would strike location 73—the right leg— but because he has the Sure Strike talent, he could choose to hit the alien in location 37—the body.';
+	}
+	
+	else if (term == 'swift attack'){
+	var result = 'Prerequisites: Weapon Skill 35.<br>As a Full Action, you may make two melee attacks on your Turn.';
+	}
+	
+	else if (term == 'takedown'){
+	var result = 'You are skilled at taking an opponent alive. As a Half Action you may declare that you are attempting to Takedown an opponent before Testing Weapon Skill. If you hit and do at least 1 point of Damage, this damage is ignored and your opponent must make a Toughness Test or be Stunned for one Round.';
+	}
+	
+	else if (term == 'talented'){
+	var result = 'Talent Groups: All Skills.<br>Choose any one of your Skills. You gain a +10 bonus to Tests when using this Skill.';
+	}
+	
+	else if (term == 'technical knock'){
+	var result = 'Prerequisites: Intelligence 30.<br>With a honeyed whisper and ritual motion, you can awaken sleeping gun-spirits into furious action once more. You may unjam any gun as a Half Action. You must touch the gun in question to enact this rite. You may only perform this rite on one weapon per Round—any more would be disrespectful.';
+	}
+	
+	else if (term == 'feedback screech'){
+	var result = 'Talent Groups: Primitive, Chain, Shock, Power.<br>You have received basic training in a group of thrown weaponry, and can use such weapons without penalty.';
+	}
+	
+	else if (term == 'total recall'){
+	var result = 'Prerequisites: Intelligence 30.<br>Through long years of mental conditioning and practice, your mind is like an archive, able to record and recall great amounts of information. You can automatically remember any trivial fact or piece of information that you might feasibly have picked up in the past. When trying to recall more detailed or obscure facts, such as the precise layout of a crime scene or a page you read in an ancient grimoire five years ago, the GM may require you to make an Intelligence Test.';
+	}
+	
+	else if (term == 'true grit'){
+	var result = 'Prerequisites: Toughness 40.<br>You are able to shrug off wounds that would fell lesser men. Whenever you suffer Critical Damage, halve the result (rounding up).';
+	}
+	
+	else if (term == 'two-weapon wielder'){
+	var result = 'Talent Groups: Ballistic, Melee.<br>Prerequisites: Ballistic Skill 35 or Weapon Skill 35, Agility 35.<br>When armed with two weapons of a particular type, you may spend a Full Action to attack with both on your turn. Each Test made to attack with the weapons takes a –20 penalty. You must take Two-Weapon Wielder (Melee) and Two-Weapon Wielder (Ballistic) if you wish to use a gun and hand weapon at the same time.';
+	}
+	
+	else if (term == 'unremarkable'){
+	var result = 'You have a forgettable face and are able to blend in with a crowd. Attempts to notice you when amongst other people or anyone attempting to describe you or recall details about you incurs a –20 penalty.';
+	}
+	
+	else if (term == 'unshakeable faith'){
+	var result = 'Your faith that the Emperor will preserve you is so strong that you are unafraid of stepping into danger. You may re-roll any failed Willpower Tests to avoid the effects of Fear.';
+	}
+	
+	else if (term == 'wall of steel'){
+	var result = 'Prerequisites: Agility 35.<br>Your blades are so quick that they form a wall of impenetrable steel. You may make an additional Parry once per Round. In effect, this gives a character a second Reaction that may only be used to Parry, thus allowing them to make two Parries in a Turn. Note they may still only attempt a single Parry against any one attack.';
+	}
+	
+	
+	else {
+	var intro = ' ';
+	var result = 'I don\'t understand you please double check your query';
+	}
+	
+	document.getElementById("Output").innerHTML = intro + result;
+}
+</script>
+<div id="Body">
+	<div class="Header">
+		<h1>Dark Heresy Quick Reference</h1>
+	</div>
+	
+
+	<div class="Body">
+		<form name="SearchTerm" id="SearchTerm" action="javascript:void(-1)">
+
+			<input type="text" name=term></input>
+			<button onclick="getResult(this.form.term.value)" type="submit">Search</button>
+		</form>
+
+		<p id="Output"></p>
+
+	</div>
+
+
+</div>
+
+
+
+</body>
+</html>
