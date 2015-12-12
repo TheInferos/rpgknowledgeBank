@@ -1,0 +1,21 @@
+.sidebar{
+  position:absolute;
+   left:0; top:92px; bottom: 0;
+   width: 178px;
+   background-color: rgb(37, 36, 37);
+
+}
+h1{
+  position:absolute;
+   left:0; top:0; bottom: 0;
+   height: 92px; width: 100%;
+   background-color: rgb(56, 55, 56);
+   color:rgb(112, 102, 11);
+   margin: 0;
+   font-family: monospace;
+   text-align: center;
+   font-size: 5em;
+}
+li{
+  list-style: none;
+}
